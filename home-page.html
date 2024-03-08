@@ -10,6 +10,7 @@
     <div class="heading-container">
         <h2 class="main">GAIA </h2>
         <h2>Application Form</h2>
+        <a href="login.html" class="logout-button">Logout</a>
     </div>
     <div><svg class="background-gradient">
         <defs>
@@ -23,19 +24,29 @@
     </header>  
     <br/>      
     <nav>
-        <a href="home-page.html" class="highlight">KYC</a>
-        <a href="spDD.html">spDD</a> 
-        <a href="EDD.html">EDD</a> 
-        <a href="OFAC.html">OFAC</a>
+        <div class="flex-container">
+            <div class="dropdown" id="kycDropdown">
+                <a href="#" class="highlight" onclick="toggleDropdown()" id="kyc-button">KYC</a>
+                <div class="dropdown-content">
+                    <a href="home-page.html">US Consumer</a>
+                    <a href="non-us-consumer.html">Non US Consumer</a>
+                    <a href="us-entity.html">US Entity</a>
+                    <a href="non-us-entity.html">Non US Entity</a>
+                </div>
+            </div>
+            <a href="spDD.html" class="button">spDD</a>
+            <a href="EDD.html" class="button">EDD</a>
+            <a href="OFAC.html" class="button">OFAC</a>
+        </div>
     </nav>
     <hr/>
     <div class="p1">
-        <select name="Choose customer type" class="pa1" placeholder="Choose customer type">
+        <select name="Choose customer type" class="pa1" id="customerType" placeholder="Choose customer type" onchange="redirectOnChange()">
             <option value="Choose customer type">Choose customer type</option>  
-            <option value="New-Application"><a href="new.html" value="New-Application">New Application</a></option> 
+            <option value="New-Application">New Application</option> 
             <option value="Existing-customer">Existing customer</option> 
-            <option value="Pending-customer">Pending customer</a></option> 
-        </select>                    
+            <option value="Pending-customer">Pending customer</option> 
+        </select>                 
         <input class="pb1" type="text" placeholder="Search">
     </div>
     <br/>
