@@ -10,6 +10,7 @@
     <div class="heading-container">
       <h2><a href="home-page.html" class="main">GAIA</a></h2>
       <h2>Application Form</h2>
+      <a href="login.html" class="logout-button">Logout</a>
     </div>
     <div><svg class="background-gradient">
         <defs>
@@ -23,11 +24,21 @@
     </header>  
     <br/>      
     <nav>
-        <a href="KYC.HTML">Non US Entity</a>
-        <a href="spDD.html">spDD</a> 
-        <a href="EDD.html">EDD</a> 
-        <a href="OFAC.html">OFAC</a>
-    </nav>
+      <div class="flex-container">
+          <div class="dropdown" id="kycDropdown">
+              <a href="#" class="highlight" onclick="toggleDropdown()">KYC</a>
+              <div class="dropdown-content">
+                  <a href="home-page.html">US Consumer</a>
+                  <a href="non-us-consumer.html">Non US Consumer</a>
+                  <a href="us-entity.html">US Entity</a>
+                  <a href="non-us-entity.html">Non US Entity</a>
+              </div>
+          </div>
+          <a href="spDD.html" class="button">spDD</a>
+          <a href="EDD.html" class="button">EDD</a>
+          <a href="OFAC.html" class="button">OFAC</a>
+      </div>
+  </nav>
     <hr/>
     <div class="p1">
       <select name="Choose customer type" class="pa1" placeholder="Choose customer type">  
