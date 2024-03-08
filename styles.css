@@ -314,3 +314,22 @@ nav a:visited,
 #ofacmain{
     background-color:#c7c6c2;
  }
+
+ /*HOVER*/
+
+.hover-info::after {
+    content: attr(data-info);
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    color: black;
+    padding: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.hover-info:hover::after {
+    display: block;
+    text-decoration: black;
+}
