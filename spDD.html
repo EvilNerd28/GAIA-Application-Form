@@ -10,6 +10,7 @@
     <div class="heading-container">
         <h2><a href="home-page.html" class="main">GAIA</a></h2>
         <h2>Application Form</h2>
+        <a href="login.html" class="logout-button">Logout</a>
     </div>
     <div><svg class="background-gradient">
         <defs>
@@ -23,10 +24,20 @@
     </header>  
     <br/>      
     <nav>
-        <a href="home-page.html">KYC</a>
-        <a href="spDD.html" class="highlight">spDD</a> 
-        <a href="EDD.html">EDD</a> 
-        <a href="OFAC.html">OFAC</a>
+        <div class="flex-container">
+            <div class="dropdown" id="kycDropdown">
+                <a href="#" class="highlight" onclick="toggleDropdown()">KYC</a>
+                <div class="dropdown-content">
+                    <a href="home-page.html">US Consumer</a>
+                    <a href="non-us-consumer.html">Non US Consumer</a>
+                    <a href="us-entity.html">US Entity</a>
+                    <a href="non-us-entity.html">Non US Entity</a>
+                </div>
+            </div>
+            <a href="spDD.html" class="button" id="spDDmain">spDD</a>
+            <a href="EDD.html" class="button">EDD</a>
+            <a href="OFAC.html" class="button">OFAC</a>
+        </div>
     </nav>
     <hr/>
     <div class="p1">
@@ -110,7 +121,7 @@
     <br/>
     <div class="mini">
         <lable>Document Type:</lable>
-        <select name="Document Type" id="dtype"> 
+        <select name="Document Type" id="dtypecbd"> 
             <option value="ptypes-n-CBD">Products types and products containing CBD</option> 
             <option value="certificate-of-analysts">Certificate of Analysts</option> 
             <option value="testing-schedule">Testing Schedule</option> 
@@ -138,7 +149,52 @@
     </div>
     <br/>
     <br/>
+    <div class="purple">
+        Additional Documents
+     </div>
+     <br>
+     <div class="mini">
+        <lable>Addtional Documents:</lable>
+        <select name="add-doc" id="addtype"> 
+            <option value="">Any KYC Addendum Form(s) for each account requested, (if applicable)</option> 
+            <option value="">High Risk Onboarding Checklist Form</option>
+            <option value="">A Beneficial Ownership Certification Form, (if applicable)</option>
+            <option value="">Entity documentation such as business documentation as described in the High Risk KYC Profile Form</option>
+            <option value="">Email correspondence to clarify any questions and responses during the onboarding process</option>
+            <option value="">All documentation indicated within the High Risk KYC Profile Form (e.g., W-8BEN-E, Bank Statements, Ownership Chart)</option> 
+            <option value="">NPA Disclosure, if applicable</option>
+            <option value="">Any other documentation requested by the EDD Manager or AML Operations Director</option>
+            <option value="">CLEAR search results</option>
+            <option value="">Open Source Search</option>
+            <option value="">CLEAR search</option>
+            <option value="">OFAC search (LexisNexis) & match</option>
+            <option value="">PEP match</option>
+            
+        </select>
+        <label for="additional">Upload:</label>
+        <input type="file" class="input" name="fileInput">
+        <button class="view-more-btn" id="viewMoreBtn">View</button>
+    </div>
+     <br/>
     <br/>
+    <div class="purple">
+        Search Results
+     </div>
     <br/>
+    <div class="spdd-grid">
+        <div class="s result1">
+            <lable>CLEAR</lable>
+            <input type="text" name="clear"/>
+            <lable>OPEN SOURCE</lable>
+            <input type="text" name="opensource"/>
+        </div>
+        <div class="s result2">
+            <lable>OFAC</lable>
+            <input type="text" name="ofac"/>
+            <lable>PEP</lable>
+            <input type="text" name="pep"/>
+        </div>
+    </div>
+    <br/><br/><br/><br/>
     </body>
     </html>
