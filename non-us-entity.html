@@ -26,9 +26,9 @@
     <nav>
       <div class="flex-container">
           <div class="dropdown" id="kycDropdown">
-              <a href="#" class="highlight" onclick="toggleDropdown()" id="kyc-button">Non US Entity</a>
+              <a href="#" class="highlight" onclick="toggleDropdown()" id="kyc-button">US Entity</a>
               <div class="dropdown-content">
-                  <a href="home-page.html">US Consumer</a>
+                  <a href="us-consumer.html">US Consumer</a>
                   <a href="non-us-consumer.html">Non US Consumer</a>
                   <a href="us-entity.html">US Entity</a>
                   <a href="non-us-entity.html">Non US Entity</a>
@@ -39,6 +39,8 @@
           <a class="button" id="ofacmain">OFAC</a>
       </div>
   </nav>
+    </div>
+    <br/>
     <hr/>
     <div class="p1">
       <select name="Choose customer type" class="pa1" placeholder="Choose customer type">  
@@ -49,6 +51,7 @@
       </select>                    
       <input class="pb1" type="text" placeholder="Search">
   </div>
+  <br>
   <form >
     <div class="purple">Personal Information</div>
     <div class="gridA1">
@@ -93,37 +96,38 @@
             <input type="text" name="id-type"/>
         </div>        
     </div>
+    <br/>
     <div class="miniflex"><lable>SIGNATORIES:</lable></div>
     <br>
     <button class="view-more-btn" id="viewMoreBtn">View More</button>
     <br><br><br/><br/>
     <div class="sub-grid">
-        <div class="sub-grid-item colx">
-          <lable>KYC ID:</lable>
-            <input type="text" name="kycID"/>
-          <lable>EDD Score:</lable>
-            <input type="text" name="eddscore"/>
-          <lable>SDN Score:</lable>
-            <input type="text" name="sdnscore"/>
-        </div>
-        <div class="sub-grid-item coly">
-          <lable>SPDD Score:</lable>
-            <input type="text" name="spddscore"/>
-          <lable>OFAC Score:</lable>
-            <input type="text" name="ofacscore"/>
-          <lable>Bsuiness Category:</lable>
-            <input type="text" name="bcat"/>
-        </div>
-        <div class="sub-grid-item colz">
-          <lable>CDD Score:</lable>
-            <input type="text" name="cddscore"/>
-          <lable>PEP Score:</lable>
-            <input type="text" name="pepscore"/>
-          <lable>NAICS Code:</lable>
-            <input type="text" name="naics"/>
-        </div>
-    </div>
-    <br>
+      <div class="sub-grid-item colx">
+        <lable>KYC ID:</lable>
+          <input type="text" name="kycID"/>
+        <lable>EDD Score:</lable>
+          <input type="text" name="eddscore"/>
+        <lable>SDN Score:</lable>
+          <input type="text" name="sdnscore"/>
+      </div>
+      <div class="sub-grid-item coly">
+        <lable>SPDD Score:</lable>
+          <input type="text" name="spddscore"/>
+        <lable>OFAC Score:</lable>
+          <input type="text" name="ofacscore"/>
+        <lable>Business Category:</lable>
+          <input type="text" name="bcat"/>
+      </div>
+      <div class="sub-grid-item colz">
+        <lable>CDD Score:</lable>
+          <input type="text" name="cddscore"/>
+        <lable>PEP Score:</lable>
+          <input type="text" name="pepscore"/>
+        <lable>NAICS Code:</lable>
+          <input type="text" name="naics"/>
+      </div>
+  </div>
+  <br>
     <div class="miniflex"><lable>Parties associates with consumer:</lable></div>
     <br>
     <button class="view-more-btn" id="viewMoreBtn">View More</button>
@@ -135,44 +139,43 @@
       <li><div class="sub1">Primary Documentation:</div></li>
       <br/>
       <div class="mini">
-        <lable>Document Type:</lable>
-        <select name="Document Type" id="dtype"> 
-            <option value=""></option>
-            <option value="">Government issued business license</option>
-            <option value="">General Partnership Agreement of Joint Venture Agreement</option>
-            <option value="">Limited Partnership Agreement</option>
-            <option value="">Trust Instrument or Trust Certification</option>
-            <option value="">LLC Articles of Organization</option>
-            <option value="">Charter or Bylaws or Management</option>
-            <option value="">Agreement (Unincorporated Association)</option>
-            <option value="">Agreement (Unincorporated Association)</option> 
-          </select>
-          <lable>Document Number:</lable>
-            <input type="text" name="docnum"/>
-          <button class="view-more-btn" id="viewMoreBtn">View More</button>
-        </div>
-      </ul>
-    </div>
+      <lable>Document Type:</lable>
+      <select name="Document Type" id="dtype"> 
+          <option value=""></option>
+          <option value="">Government issued business license</option>
+          <option value="">General Partnership Agreement of Joint Venture Agreement</option>
+          <option value="">Limited Partnership Agreement</option>
+          <option value="">Trust Instrument or Trust Certification</option>
+          <option value="">LLC Articles of Organization</option>
+          <option value="">Charter or Bylaws or Management</option>
+          <option value="">Agreement (Unincorporated Association)</option>
+          <option value="">Agreement (Unincorporated Association)</option> 
+        </select>
+        <lable>Document Number:</lable>
+          <input type="text" name="docnum"/>
+        <button class="view-more-btn" id="viewMoreBtn">View More</button>
+      </div>
+    </ul>
+  </div>
+  <br/><br/>
+  <div class="purple">KYCC- Non Documentary Verification</div>
     <br/><br/>
-    <div class="purple">KYCC- Non Documentary Verification</div>
-      <br/><br/>
-          <lable>Document Type:</lable>
-            <select name="Document Type" id="dtype"> 
-              <option value="Credit report">Credit report</option> 
-              <option value="LexisNexis IDV">LexisNexis IDV</option>
-              <option value="Tax return">Tax return</option>
-              <option value="audit">Audited financial statement</option>
-            </select>
-          <lable>Document Number:</lable>
-              <input type="text" name="docnum"/>
-              <button class="view-more-btn" id="viewMoreBtn">View More</button>
-        <br/>
-        <br/>
-</form>
-<br/>
-<br/>
-<br/>
-<br/>
+        <lable>Document Type:</lable>
+          <select name="Document Type" id="dtype"> 
+            <option value="Credit report">Credit report</option> 
+            <option value="LexisNexis IDV">LexisNexis IDV</option>
+            <option value="Tax return">Tax return</option>
+            <option value="audit">Audited financial statement</option>
+          </select>
+        <lable>Document Number:</lable>
+            <input type="text" name="docnum"/>
+            <button class="view-more-btn" id="viewMoreBtn">View More</button>
+      <br/>
+      <br/>
+  </form>
   <br/>
-    </body>
-    </html>
+  <br/>
+  <br/>
+  <br/>
+</body>
+</html>
