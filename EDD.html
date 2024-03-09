@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>GAIA-Application-Homepage</title>
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
+    <script src="javascript.js"></script>
+</head>
+<body>
+    <header>
+    <div class="heading-container">
+      <h2><a href="home-page.html" class="main">GAIA</a></h2>
+      <h2>Application Form</h2>
+      <a href="login.html" class="logout-button">Logout</a>
+    </div>
+    <div><svg class="background-gradient">
+        <defs>
+          <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#A1BAFE" />
+            <stop offset="100%" stop-color="#8D5185" />
+          </linearGradient>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#gradient)" />
+      </svg></div>
+    </header>  
+    <br/>      
+    <nav>
+      <div class="flex-container">
+          <div class="dropdown" id="kycDropdown">
+              <a href="#" class="highlight" onclick="toggleDropdown()">KYC</a>
+              <div class="dropdown-content">
+                  <a href="home-page.html">US Consumer</a>
+                  <a href="non-us-consumer.html">Non US Consumer</a>
+                  <a href="us-entity.html">US Entity</a>
+                  <a href="non-us-entity.html">Non US Entity</a>
+              </div>
+          </div>
+          <a href="spDD.html" class="button">spDD</a>
+          <a href="EDD.html" class="button" id="EDDmain">EDD</a>
+          <a class="button" id="ofacmain">OFAC</a>
+      </div>
+  </nav>
+    <br>
+    <hr/>
+    <div class="p1">
+        <select name="Choose customer type" class="pa1" placeholder="Choose customer type">  
+            <option value="Existing">Existing customer</option> 
+            <option value="Pending">Pending customer</a></option> 
+        </select>                    
+        <input class="pb1" type="text" placeholder="Search">
+    </div>
+    <br/>
+    <div class="purple">
+        Source of wealth
+    </div>
+    <br/><br/>
+    <div class="mini">
+        <lable>Document Type:</lable>
+        <select name="Document Type" id="dtype"> 
+            <option value="employment">Employment</option> 
+            <option value="business">Business</option> 
+            <option value="inheritance">Inheritance</option> 
+        </select>
+        <lable>Document ID:</lable>
+        <input type="text" name="docID"/>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="purple">
+        Financial statement
+    </div>
+    <br/><br/>
+    <div class="mini">
+        <lable>Document Type:</lable>
+        <select name="Document Type" id="dtype"> 
+            <option value="audited">Audited Statements</option> 
+            <option value="tax">Tax returns</option> 
+            <option value="annual-rep">Annual report</option> 
+        </select>
+        <lable>Document ID:</lable>
+        <input type="text" name="docID"/>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/><br/>
+    <div class="purple">
+        Banking references
+    </div>
+    <br/><br/>
+    <div class="mini">
+        <lable>Document Type:</lable>
+        <select name="Document Type" id="dtype"> 
+            <option value="bank-statement">Bank statement from other banks (3 months)</option> 
+          </select>
+        <lable>Document ID:</lable>
+        <input type="text" name="docID"/>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <div class="mini">
+      <label for="myCheckbox">Site Visit should be recorded in the call report</label>
+      <input type="checkbox" id="myCheckbox" name="myCheckbox">
+    </div>
+    <br><br><br>
+    <div class="mini">
+      <lable>Document Type:</lable>
+      <select name="Document Type" id="dtype">  
+        <option value="beneficial-ownership">Enhanced beneficial ownership</option> 
+      </select>
+      <lable>Document ID:</lable>
+      <input type="text" name="docID"/>
+    </div>
+    <br><br>
+    <br><br>
+  </body>
+</html>
