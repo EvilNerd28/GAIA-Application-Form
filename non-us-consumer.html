@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>GAIA-Application-Homepage</title>
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
+    <script src="javascript.js"></script>
+</head>
+<body>
+    <header>
+    <div class="heading-container">
+        <a href="home-page.html"><img src="logo gaia.png" class="main" height="60px" width="60px"></a>
+        <h2>Due Diligence Platform</h2>
+        <a href="login.html" class="logout-button">Logout</a>
+    </div>
+    </header>
+    </header>  
+    <br/>      
+    <nav>
+        <div class="flex-container">
+            <div class="dropdown" id="kycDropdown">
+                <a href="#" class="highlight" onclick="toggleDropdown()" id="kyc-button">Non US Consumer</a>
+                <div class="dropdown-content">
+                    <a href="us-consumer.html">US Consumer</a>
+                    <a href="non-us-consumer.html">Non US Consumer</a>
+                    <a href="us-entity.html">US Entity</a>
+                    <a href="non-us-entity.html">Non US Entity</a>
+                </div>
+            </div>
+            <a href="spDD.html" class="button">spDD</a>
+            <a href="EDD.html" class="button">EDD</a>
+            <a class="button" id="ofacmain">OFAC</a>
+        </div>
+    </nav>
+    <hr/>
+    <div class="p1">
+      <select name="Choose customer type" class="pa1" placeholder="Choose customer type">  
+        <option value="Choose customer type">Choose customer type</option>  
+        <option value="New-Application"><a href="new.html" value="New-Application">New Application</a></option> 
+        <option value="Existing">Existing customer</option> 
+        <option value="Pending">Pending customer</a></option> 
+      </select>                    
+      <input class="pb1" type="text" placeholder="Search">
+  </div>
+  <br>
+  <form >
+    <div class="purple">Personal Information</div>
+    <div class="gridA1">
+        <div class="grid-itemA1 col1">
+            <lable>Application ID:</lable>
+                <input type="text" name="app-id"/>
+            <lable>Middle Name:</lable>
+                <input type="text" name="mname"/>
+            <lable>Gender:</lable>
+                <input type="text" name="gender"/>
+            <lable>Street Address:</lable>
+                <input type="text" name="add"/>
+            <lable>Postal Code:</lable>
+                <input type="text" name="postal-code"/>
+        </div>
+        <div class="grid-itemA1 col2">
+            <lable>Account Type:</lable>
+                <input type="text" name="acc-type"/>
+            <lable>Last Name:</lable>
+                <input type="text" name="lname"/>
+            <lable>Email:</lable>
+                <input type="email" name="email"/>
+            <lable>City:</lable>
+                <input type="text" name="city"/>
+            <lable>Country:</lable>
+                <input type="text" name="country"/>
+            <lable>ID Number:</lable>
+                <input type="text" name="idno"/>
+        </div>           
+        <div class="grid-itemA1 col3">
+            <lable>First Name:</lable>
+                <input type="text" name="fname"/>
+            <lable>Birth Date:</lable>
+                <input type="date" name="date"/>
+            <lable>Phone:</lable>
+                <input type="number" name="phn"/>
+            <lable>State:</lable>
+                <input type="text" name="state"/>
+            <lable>ID Type:</lable>
+                <input type="text" name="id-type"/>
+        </div>        
+    </div>
+    <br/>
+    <div class="sub-grid">
+        <div class="sub-grid-item colx">
+          <lable>KYC ID:</lable>
+              <input type="text" name="kycID"/>
+          <lable>EDD Score:</lable>
+              <input type="text" name="eddscore"/>
+        </div>
+        <div class="sub-grid-item coly">
+            <lable>SDN Score:</lable>
+                <input type="text" name="sdnscore"/>
+            <lable>OFAC Score:</lable>
+                <input type="text" name="ofacscore"/>
+        </div>
+        <div class="sub-grid-item colz">
+            <lable>CDD Score:</lable>
+                <input type="text" name="cddscore"/>
+            <lable>PEP Score:</lable>
+                <input type="text" name="pepscore"/>
+        </div>
+    </div>
+    <br>
+    <div class="miniflex"><lable>Parties associated with consumer</lable></div>
+    <br>
+    <button class="view-more-btn" id="viewMoreBtn">View More</button>
+    <br><br><br/><br/>
+    <div class="purple">KYC- Documentary Verification</div>
+    <br/>
+        <div class="rowB1">
+            <ul style="list-style-type:disc">
+                <li><div class="sub1">Primary Documentation:</div></li>
+                <br/>
+                <div class="mini">
+                <lable>Document Type:</lable>
+                <select name="Document Type" id="dtype"> 
+                    <option value="passport-non-us">Passport</option>
+                    <option value="national-id">National Identity Card</option> 
+                </select>
+                <label for="nonus-doctype-p">Upload:</label>
+                <input type="file" class="input" name="fileInput">
+                <lable>Document Number:</lable>
+                <input type="text" name="docnum"/>
+                <button class="view-more-btn" id="viewMoreBtn">View Document</button>
+            </div>
+            <br/>
+            <br/>
+            <li><div class="sub1">Secondary Documentation:</div></li>
+            <br/>
+                <lable>Document Type:</lable>
+                <select name="Document Type" id="dtype"> 
+                    <option value="cob">Certifies Birth Certificate</option> 
+                    <option value="benefits-ID">Benefits ID card with photo</option> 
+                    <option value="brokerage-stmt">Bank/brokerage statement</option> 
+                </select>
+                <label for="nonus-doctype-s">Upload:</label>
+                <input type="file" class="input" name="fileInput">
+                <lable>Document Number:</lable>
+                <input type="text" name="docnum"/>
+                <button class="view-more-btn" id="viewMoreBtn">View Document</button>
+            </ul>
+        </div>
+    <br/>
+    <div class="purple">KYC- Non Documentary Verification</div>
+    <br/><br/>
+        <lable>Document Type:</lable>
+                <select name="Document Type" id="dtype"> 
+                    <option value="Credit report">Credit report</option> 
+                    <option value="LexisNexis IDV">LexisNexis IDV</option>
+                    <option value="Tax return">Tax return</option>
+                    <option value="Pay stub">Pay stub</option>
+                    <option value="Utility bill">Utility bill</option>
+                    <option value="Mortgage statement">Mortgage statement</option>
+                    <option value="Account statement from previous bank">Account statement from previous bank</option>
+                </select>
+        <label for="nonus-nondoc">Upload:</label>
+        <input type="file" class="input" name="fileInput">
+        <lable>Document Number:</lable>
+        <input type="text" name="docnum"/>
+            <button class="view-more-btn" id="viewMoreBtn">View Document</button>
+    </form>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+</body>
+</html>

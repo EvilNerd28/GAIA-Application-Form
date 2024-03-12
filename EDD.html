@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>GAIA-Application-Homepage</title>
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
+    <script src="javascript.js"></script>
+</head>
+<body>
+    <header>
+    <div class="heading-container">
+        <a href="home-page.html"><img src="logo gaia.png" class="main" height="60px" width="60px"></a>
+        <h2>Due Diligence Platform</h2>
+        <a href="login.html" class="logout-button">Logout</a>
+    </div>
+    </header>  
+    <br/>      
+    <nav>
+      <div class="flex-container">
+          <div class="dropdown" id="kycDropdown">
+              <a href="#" class="highlight" onclick="toggleDropdown()">KYC</a>
+              <div class="dropdown-content">
+                  <a href="home-page.html">US Consumer</a>
+                  <a href="non-us-consumer.html">Non US Consumer</a>
+                  <a href="us-entity.html">US Entity</a>
+                  <a href="non-us-entity.html">Non US Entity</a>
+              </div>
+          </div>
+          <a href="spDD.html" class="button">spDD</a>
+          <a href="EDD.html" class="button" id="EDDmain">EDD</a>
+          <a class="button" id="ofacmain">OFAC</a>
+      </div>
+  </nav>
+    <br>
+    <hr/>
+    <div class="p1">
+        <select name="Choose customer type" class="pa1" placeholder="Choose customer type">  
+            <option value="Existing">Existing customer</option> 
+            <option value="Pending">Pending customer</a></option> 
+        </select>                    
+        <input class="pb1" type="text" placeholder="Search">
+    </div>
+    <br/>
+    <div class="purple">
+        Source of wealth
+    </div>
+    <br/><br/>
+    <div class="mini">
+        <lable>Document Type:</lable>
+        <select name="Document Type" id="dtype"> 
+            <option value="employment">Employment</option> 
+            <option value="business">Business</option> 
+            <option value="inheritance">Inheritance</option> 
+        </select>
+        <label for="Source-of-wealth">Upload:</label>
+        <input type="file" class="input" name="fileInput">
+        <lable>Document ID:</lable>
+        <input type="text" name="docID"/>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="purple">
+        Financial statement
+    </div>
+    <br/><br/>
+    <div class="mini">
+        <lable>Document Type:</lable>
+        <select name="Document Type" id="dtype"> 
+            <option value="audited">Audited Statements</option> 
+            <option value="tax">Tax returns</option> 
+            <option value="annual-rep">Annual report</option> 
+        </select>
+        <label for="fin-statement">Upload:</label>
+        <input type="file" class="input" name="fileInput">
+        <lable>Document ID:</lable>
+        <input type="text" name="docID"/>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/><br/>
+    <div class="purple">
+        Banking references
+    </div>
+    <br/><br/>
+    <div class="mini">
+        <lable>Document Type:</lable>
+        <select name="Document Type" id="dtype"> 
+            <option value="bank-statement">Bank statement from other banks (3 months)</option> 
+          </select>
+        <label for="banking-ref">Upload:</label>
+          <input type="file" class="input" name="fileInput">
+        <lable>Document ID:</lable>
+        <input type="text" name="docID"/>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <div class="mini">
+      <label for="myCheckbox">Site Visit should be recorded in the call report</label>
+      <input type="checkbox" id="myCheckbox" name="myCheckbox">
+    </div>
+    <br><br><br>
+    <div class="mini">
+      <lable>Document Type:</lable>
+      <select name="Document Type" id="dtype">  
+        <option value="beneficial-ownership">Enhanced beneficial ownership</option> 
+      </select>
+      <label for="doctype-edd">Upload:</label>
+      <input type="file" class="input" name="fileInput">
+      <lable>Document ID:</lable>
+      <input type="text" name="docID"/>
+    </div>
+    <br><br>
+    <br><br>
+  </body>
+</html>

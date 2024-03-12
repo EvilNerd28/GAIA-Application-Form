@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>GAIA-Application-Homepage</title>
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
+    <script src="javascript.js"></script>
+</head>
+<body>
+    <header>
+    <div class="heading-container">
+        <a href="home-page.html"><img src="logo gaia.png" class="main" height="60px" width="60px"></a>
+        <h2>Due Diligence Platform</h2>
+        <a href="login.html" class="logout-button">Logout</a>
+    </div>
+    </header>  
+    <br/> 
+    <div class="flex2">
+        <a href="new.html"><input class="flex-item2" id="ind1" type="button" value="Individual Application"/></a>
+        <a href="entity.html"><input class="flex-item2" id="ent1" type="button" value="Entity Application"/></a>
+    </div>
+    <br/> 
+    <div class="purple">Personal Information</div>
+    <br><br>
+    <div class="mini">
+        <lable>Account Type:</lable>
+        <select name="acc-type" id="acc-type"> 
+            <option value="checking">Checking</option> 
+            <option value="loan">Loan</option> 
+            <option value="deposit">Deposit</option> 
+            <option value="Card">Card</option>
+            <option value="other">Other</option>
+        </select>
+        <lable>Document ID:</lable>
+        <input type="text" name="docID"/>
+        <br><br>
+        <lable>Entity Full Name:</lable>
+        <input type="text" name="ename"/>
+    </div>
+    <br><br>
+    <div class="upload">
+        <img src="id-img.png" height="70px" width="100px">
+        <form enctype="multipart/form-data">
+            <label for="fileInput">Select a File:</label>
+            <input type="file" class="input" name="fileInput">
+            <label id="fileLabel" for="camera-input">Camera upload</label>
+            <input type="file" class="input" name="camera-input" accept="image/*" capture="camera">
+        </form>
+    </div>
+    <br/>
+    <div class="purple">Personal Information</div>
+    <br/>
+    <div class="grid">
+        <div class="grid-item rowB1">
+            <lable>First Name:</lable>
+            <input type="text" name="fname1"/>
+            <lable>Gender:</lable>
+            <input type="text" name="gender1"/>
+            <lable>Street Address:</lable>
+            <input type="text" name="sadd"/>
+            <lable>Postal Code:</lable>
+            <input type="text" name="pscode"/>
+            <lable>ID Number:</lable>
+            <input type="text" name="idno1"/>
+        </div>
+        <br/>
+        <div class="grid-item rowB2">
+            <lable>Middle Name:</lable>
+            <input type="text" name="mname1"/>            
+            <lable>Email:</lable>
+            <input type="email" name="email1"/>
+            <lable>City:</lable>
+            <input type="text" name="city1"/>
+            <lable>Country:</lable>
+            <input type="text" name="count1"/>
+            <lable>ID Type:</lable>
+            <input type="text" name="idtype1"/>      
+        </div>
+        <br/>
+        <div class="grid-item rowB3">
+            <lable>Last Name:</lable>
+            <input type="text" name="lname1"/>
+            <lable>Birth Date:</lable>
+            <input type="date" name="date1"/>        
+            <lable>Phone:</lable>
+            <input type="number" name="phn1"/> 
+            <lable>State:</lable>
+            <input type="text" name="state"/>    
+        </div>
+        <br/> 
+    </div><br><br>
+    <div class="purple">Signatories: </div>
+    <div class="mini">
+        <lable>Signatories Full Name:</lable>
+        <input type="text" name="docID"/>
+        <lable >Signature Upload:</lable>
+        <input type="file" class="input" name="fileInput">
+        <input type="file" class="input" name="fileInput">
+    </div>
+    <br><br>            
+    <center><input type="submit" value="Submit" id="submit"></center>
+    <br/><br><br>   
+</body>
+</html>
