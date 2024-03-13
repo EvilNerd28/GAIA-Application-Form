@@ -19,10 +19,11 @@
         <a href="entity.html"><input class="flex-item2" id="ent1" type="button" value="Entity Application"/></a>
     </div>
     <br/> 
-    <div class="purple">Personal Information</div>
+    <div class="purple">Entity Application Form</div>
     <br><br>
-    <div class="mini">
-        <lable>Account Type:</lable>
+    <div class="entity-grid">
+        <div class="e col1-entity">
+        <label>Account Type:</label>
         <select name="acc-type" id="acc-type"> 
             <option value="checking">Checking</option> 
             <option value="loan">Loan</option> 
@@ -30,11 +31,15 @@
             <option value="Card">Card</option>
             <option value="other">Other</option>
         </select>
-        <lable>Document ID:</lable>
-        <input type="text" name="docID"/>
-        <br><br>
-        <lable>Entity Full Name:</lable>
+        <label>Entity Full Name:</label>
         <input type="text" name="ename"/>
+        </div>
+        <div class="e col2-entity">
+            <label>If chosen other enter here</label>
+        <input type="text" name="docID"/>
+        <label>Business Category:</label>
+        <input type="text" name="b-cat"/>
+        </div>    
     </div>
     <br><br>
     <div class="upload">
@@ -51,50 +56,51 @@
     <br/>
     <div class="grid">
         <div class="grid-item rowB1">
-            <lable>First Name:</lable>
+            <label>First Name:</label>
             <input type="text" name="fname1"/>
-            <lable>Gender:</lable>
+            <label>Gender:</label>
             <input type="text" name="gender1"/>
-            <lable>Street Address:</lable>
+            <label>Street Address:</label>
             <input type="text" name="sadd"/>
-            <lable>Postal Code:</lable>
+            <label>Postal Code:</label>
             <input type="text" name="pscode"/>
-            <lable>ID Number:</lable>
+            <label>ID Number:</label>
             <input type="text" name="idno1"/>
         </div>
         <br/>
         <div class="grid-item rowB2">
-            <lable>Middle Name:</lable>
+            <label>Middle Name:</label>
             <input type="text" name="mname1"/>            
-            <lable>Email:</lable>
+            <label>Email:</label>
             <input type="email" name="email1"/>
-            <lable>City:</lable>
+            <label>City:</label>
             <input type="text" name="city1"/>
-            <lable>Country:</lable>
+            <label>Country:</label>
             <input type="text" name="count1"/>
-            <lable>ID Type:</lable>
+            <label>ID Type:</label>
             <input type="text" name="idtype1"/>      
         </div>
         <br/>
         <div class="grid-item rowB3">
-            <lable>Last Name:</lable>
+            <label>Last Name:</label>
             <input type="text" name="lname1"/>
-            <lable>Birth Date:</lable>
+            <label>Birth Date:</label>
             <input type="date" name="date1"/>        
-            <lable>Phone:</lable>
+            <label>Phone:</label>
             <input type="number" name="phn1"/> 
-            <lable>State:</lable>
+            <label>State:</label>
             <input type="text" name="state"/>    
         </div>
         <br/> 
     </div><br><br>
-    <div class="purple">Signatories: </div>
+    <div class="purple">Signatories</div>
+    <br/>
     <div class="mini">
-        <lable>Signatories Full Name:</lable>
+        <label>Signatories Full Name:</label>
         <input type="text" name="docID"/>
-        <lable >Signature Upload:</lable>
-        <input type="file" class="input" name="fileInput">
-        <input type="file" class="input" name="fileInput">
+        <label >Signature Upload</label>
+        <input type="file" class="input" name="fileInput" value="Select a File">
+        <input type="file" class="input" name="fileInput" value="Digital Signature">
     </div>
     <br><br>            
     <center><input type="submit" value="Submit" id="submit"></center>
