@@ -200,6 +200,12 @@ nav a:visited,
     flex: 1; 
   padding: 1rem; 
   border: none;
+  color: black;
+}
+.grid-item input{
+    border: none;
+    border-radius: 4px;
+    height: 20px;
 }
 
 .rowB1,.rowB2, .rowB3, .rowB4 > * {
@@ -239,6 +245,31 @@ nav a:visited,
     font-size: 18px;
     color: black;
   }
+
+/*Entity*/
+
+.entity-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    
+}
+
+.e {
+    padding: 1rem; 
+    border: none; 
+}
+
+.col1-entity, .col2-entity, .col3-entity > * {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: black;
+}
+
+.s input{
+    width: 120px;
+    border: none;
+}
 
 /*non us consumer*/
 
