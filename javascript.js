@@ -61,4 +61,10 @@ window.onclick = function(event) {
   }
 };
 
+// hover-info.js
 
+function applyHoverInfoBehavior() {
+  console.log('Hover info behavior applied!');
+}
+
+document.addEventListener('DOMContentLoaded', applyHoverInfoBehavior);
