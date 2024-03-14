@@ -17,22 +17,22 @@
     <nav>
         <div class="flex-container">
             <div class="dropdown" id="kycDropdown">
-                <a href="#" class="highlight" onclick="toggleDropdown()" id="kyc-button">KYC</a>
+                <a href="#" class="highlight hover-info" data-info="KYC | 3.11 CUSTOMER TYPES" onclick="toggleDropdown()" id="kyc-button">KYC</a>
                 <div class="dropdown-content">
                     <a href="us-consumer.html" class="hover-info" data-info="1.1 US Consumer">US Consumer</a>
                     <a href="non-us-consumer.html" class="hover-info" data-info="1.2 Non US Consumer">Non US Consumer</a>
                     <a href="us-entity.html" class="hover-info" data-info="1.3 US Entity">US Entity</a>
-                    <a href="non-us-entity.html" class="hover-info" data-info="1.4 Non US Entity">Non US Entity</a>
+                    <a href="non-us-entity.html" class="hover-info" data-info="1.4 Non US Consumer">Non US Entity</a>
                 </div>
             </div>
-            <a href="spDD.html" class="button">spDD</a>
-            <a href="EDD.html" class="button">EDD</a>
+            <a href="spDD.html" class="button hover-info" data-info="KYC | 3.7 Specialized Due Diligence (SpDD)">spDD</a>
+            <a href="EDD.html" class="button hover-info" data-info="HIGH RISK ONBOARDING & REVIEW">EDD</a>
             <a class="button" id="ofacmain">OFAC</a>
         </div>
     </nav>
     <hr/>
     <div class="p1">
-        <select name="Choose customer type" class="pa1" id="customerType" placeholder="Choose customer type" onchange="redirectOnChange()">
+        <select name="Choose customer type" class="pa1 hover-info" data-info="KYC | ACCOUNT TYPE" id="customerType" placeholder="Choose customer type" onchange="redirectOnChange()">
             <option value="Choose customer type">Choose customer type</option>  
             <option value="New-Application">New Application</option> 
             <option value="Existing-customer">Existing customer</option> 
@@ -46,52 +46,52 @@
         <div class="purple">Personal Information</div>
         <div class="gridA1">
             <div class="grid-itemA1 col1">
-                <lable>Application ID:</lable>
-                    <input type="text" name="app-id"/>
-                <lable>Middle Name:</lable>
+                <lable class="hover-info" data-info="Application ID">Application ID</lable>
+                    <input type="text" name="app-id" />
+                <lable class="hover-info" data-info="3.2.3 CIP Information">Middle Name</lable>
                     <input type="text" name="mname" />
-                <lable>Gender:</lable>
+                <lable class="hover-info" data-info="3.2.3 CIP Information">Gender</lable>
                     <input type="text" name="gender"/>
-                <lable>Street Address:</lable>
+                <lable class="hover-info" data-info="3.2.3 CIP Information">Street Address</lable>
                     <input type="text" name="add"/>
-                <lable>Postal Code:</lable>
+                <lable class="hover-info" data-info="3.2.3 CIP Information">Postal Code</lable>
                     <input type="text" name="postal-code"/>
             </div>
             <div class="grid-itemA1 col2">
-                <lable>Account Type:</lable>
+                <lable class="hover-info" data-info="3.2.3 CIP Information">Account Type</lable>
                     <input type="text" name="acc-type"/>
-                <lable>Last Name:</lable>
+                <lable class="hover-info" data-info="3.2.3 CIP Information">Last Name</lable>
                     <input type="text" name="lname"/>
-                <lable>Email:</lable>
+                <lable  class="hover-info" data-info="3.2.3 CIP Information">Email</lable>
                     <input type="email" name="email"/>
-                <lable>City:</lable>
+                <lable class="hover-info" data-info="3.2.3 CIP Information">City</lable>
                     <input type="text" name="city"/>
-                <lable>Country:</lable>
+                <lable class="hover-info" data-info="3.2.3 CIP Information">Country</lable>
                     <input type="text" name="country"/>
-                <lable>ID Number:</lable>
+                <lable class="hover-info" data-info="3.2.3 CIP Information">ID Number</lable>
                     <input type="text" name="idno"/>
             </div>           
             <div class="grid-itemA1 col3">
-                <lable>First Name:</lable>
+                <lable class="hover-info" data-info="3.2.3 CIP Information">First Name</lable>
                     <input type="text" name="fname"/>
-                <lable>Birth Date:</lable>
+                <lable class="hover-info" data-info="3.2.3 CIP Information">Birth Date</lable>
                     <input type="date" name="date"/>
-                <lable>Phone:</lable>
+                <lable class="hover-info" data-info="3.2.3 CIP Information">Phone</lable>
                     <input type="number" name="phn"/>
-                <lable>State:</lable>
+                <lable class="hover-info" data-info="3.2.3 CIP Information">State</lable>
                     <input type="text" name="state"/>
-                <lable>ID Type:</lable>
+                <lable class="hover-info" data-info="3.2.3 CIP Information">ID Type</lable>
                     <input type="text" name="id-type"/>
             </div>        
         </div>
         <br/>
-        <div class="purple">KYC- Documentary Verification</div>
+        <div class="purple hover-info" data-info="3.2.4 CIP Verification">KYC- Documentary Verification</div>
         <br>
         <div class="rowB1">
-            <div class="sub1">Primary Documentation:</div>
+            <div class="sub1 hover-info" data-info="3.2.4.1 CIP Verification">Primary Documentation</div>
             <br/>
             <div class="mini">
-                <lable>Document Type:</lable>
+                <lable>Document Type</lable>
                 <select name="Document Type" id="dtype"> 
                     <option value="Driver's Licence">Driver's Licence</option> 
                     <option value="Passport">Passport</option> 
@@ -100,10 +100,9 @@
                     <option value="U.S Alien Registration Card">U.S Alien Registration Card</option>
                     <option value="Permanent Resident Card">Permanent Resident Card</option>
                 </select>
-                <label for="doc-primary">Upload:</label>
+                <label for="doctype-primary">Upload</label>
                 <input type="file" class="input" name="fileInput">
-                <lable>Document Number:</lable>
-                <input type="text" name="docnum"/>
+                <img src="lens.png" height="40px" width="40px"/>
                 <button class="view-more-btn" id="viewMoreBtn" type="button" onclick="openImage()">View Document</button>
                 <!-- The Modal -->
                 <div id="myModal" class="modal">
@@ -116,9 +115,9 @@
             </div>
             <br/>
             <br/>
-            <div class="sub1">Secondary Documentation:</div>
+            <div class="sub1 hover-info" data-info="3.2.4.2 CIP Verification">Secondary Documentation</div>
             <br/><div class="mini">
-                <lable>Document Type:</lable>
+                <label>Document Type</label>
                 <select name="Document Type" id="dtype"> 
                     <option value="Driver's Licence">Driver's Licence</option> 
                     <option value="Passport">Passport</option> 
@@ -127,31 +126,29 @@
                     <option value="U.S Alien Registration Card">U.S Alien Registration Card</option>
                     <option value="Permanent Resident Card">Permanent Resident Card</option>
                 </select>
-                <label for="doc-secondary">Upload:</label>
+                <label for="doctype-secondary">Upload</label>
                 <input type="file" class="input" name="fileInput">
-                <lable>Document Number:</lable>
-                <input type="text" name="docnum"/>
+                <img src="lens.png" height="40px" width="40px"/>
                 <button class="view-more-btn" id="viewMoreBtn">View Document</button>
             </div>
         </div>
         <br/><br><br>
-        <div class="purple">KYC- Non Documentary Verification</div>
-        <br/><br>
+        <div class="purple hover-info" data-info="3.2.4.2 Non-Documentary Verification">KYC- Non Documentary Verification</div>
+        <br/>
         <div class="mini">
-            <lable>Document Type:</lable>
+            <label>Document Type</lable>
                     <select name="Document Type" id="dtype"> 
                         <option value="Credit report">Credit report</option> 
                         <option value="LexisNexis IDV">LexisNexis IDV</option>
                         <option value="Tax return">Tax return</option>
                         <option value="Pay stub">Pay stub</option>
-                        <option value="Utility bill"></option>
+                        <option value="Utility bill">Utility bill</option>
                         <option value="Mortgage statement">Mortgage statement</option>
                         <option value="Account statement from previous bank">Account statement from previous bank</option>
                     </select>
-                    <label for="non-doctype">Upload:</label>
-                    <input type="file" class="input" name="fileInput">
-            <lable>Document Number:</lable>
-                <input type="text" name="docnum"/>
+            <label for="non-doctype-primary">Upload</label>
+            <input type="file" class="input" name="fileInput">
+            <img src="lens.png" height="40px" width="40px"/>
             <button class="view-more-btn" id="viewMoreBtn">View Document</button>
         </div>
         <br>
