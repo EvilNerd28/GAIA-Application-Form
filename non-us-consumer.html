@@ -46,93 +46,91 @@
     <div class="purple">Personal Information</div>
     <div class="gridA1">
         <div class="grid-itemA1 col1">
-            <lable>Application ID:</lable>
+            <label>Application ID:</label>
                 <input type="text" name="app-id"/>
-            <lable>Middle Name:</lable>
+            <label>Middle Name:</label>
                 <input type="text" name="mname"/>
-            <lable>Gender:</lable>
+            <label>Gender:</label>
                 <input type="text" name="gender"/>
-            <lable>Street Address:</lable>
+            <label>Street Address:</label>
                 <input type="text" name="add"/>
-            <lable>Postal Code:</lable>
+            <label>Postal Code:</label>
                 <input type="text" name="postal-code"/>
         </div>
         <div class="grid-itemA1 col2">
-            <lable>Account Type:</lable>
+            <label>Account Type:</label>
                 <input type="text" name="acc-type"/>
-            <lable>Last Name:</lable>
+            <label>Last Name:</label>
                 <input type="text" name="lname"/>
-            <lable>Email:</lable>
+            <label>Email:</label>
                 <input type="email" name="email"/>
-            <lable>City:</lable>
+            <label>City:</label>
                 <input type="text" name="city"/>
-            <lable>Country:</lable>
+            <label>Country:</label>
                 <input type="text" name="country"/>
-            <lable>ID Number:</lable>
+            <label>ID Number:</label>
                 <input type="text" name="idno"/>
         </div>           
         <div class="grid-itemA1 col3">
-            <lable>First Name:</lable>
+            <label>First Name:</label>
                 <input type="text" name="fname"/>
-            <lable>Birth Date:</lable>
+            <label>Birth Date:</label>
                 <input type="date" name="date"/>
-            <lable>Phone:</lable>
+            <label>Phone:</label>
                 <input type="number" name="phn"/>
-            <lable>State:</lable>
+            <label>State:</label>
                 <input type="text" name="state"/>
-            <lable>ID Type:</lable>
+            <label>ID Type:</label>
                 <input type="text" name="id-type"/>
         </div>        
     </div>
     <br/>
     <div class="sub-grid">
         <div class="sub-grid-item colx">
-          <lable>KYC ID:</lable>
+          <label>KYC ID:</label>
               <input type="text" name="kycID"/>
-          <lable>EDD Score:</lable>
+          <label>EDD Score:</label>
               <input type="text" name="eddscore"/>
         </div>
         <div class="sub-grid-item coly">
-            <lable>SDN Score:</lable>
+            <label>SDN Score:</label>
                 <input type="text" name="sdnscore"/>
-            <lable>OFAC Score:</lable>
+            <label>OFAC Score:</label>
                 <input type="text" name="ofacscore"/>
         </div>
         <div class="sub-grid-item colz">
-            <lable>CDD Score:</lable>
+            <label>CDD Score:</label>
                 <input type="text" name="cddscore"/>
-            <lable>PEP Score:</lable>
+            <label>PEP Score:</label>
                 <input type="text" name="pepscore"/>
         </div>
     </div>
     <br>
-    <div class="miniflex"><lable>Parties associated with consumer</lable></div>
+    <div class="miniflex"><label>Parties associated with consumer</label></div>
     <br>
     <button class="view-more-btn" id="viewMoreBtn">View More</button>
     <br><br><br/><br/>
     <div class="purple">KYC- Documentary Verification</div>
     <br/>
         <div class="rowB1">
-            <ul style="list-style-type:disc">
-                <li><div class="sub1">Primary Documentation:</div></li>
+                <div class="sub1">Primary Documentation</div>
                 <br/>
                 <div class="mini">
-                <lable>Document Type:</lable>
+                <label>Document Type</label>
                 <select name="Document Type" id="dtype"> 
                     <option value="passport-non-us">Passport</option>
                     <option value="national-id">National Identity Card</option> 
                 </select>
-                <label for="nonus-doctype-p">Upload:</label>
+                <label for="nonus-doctype-p">Upload</label>
                 <input type="file" class="input" name="fileInput">
-                <lable>Document Number:</lable>
-                <input type="text" name="docnum"/>
-                <button class="view-more-btn" id="viewMoreBtn">View Document</button>
+                <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();"/>
             </div>
             <br/>
             <br/>
-            <li><div class="sub1">Secondary Documentation:</div></li>
+            <div class="sub1">Secondary Documentation:</div>
             <br/>
-                <lable>Document Type:</lable>
+            <div class="mini">
+                <label>Document Type:</label>
                 <select name="Document Type" id="dtype"> 
                     <option value="cob">Certifies Birth Certificate</option> 
                     <option value="benefits-ID">Benefits ID card with photo</option> 
@@ -140,15 +138,14 @@
                 </select>
                 <label for="nonus-doctype-s">Upload:</label>
                 <input type="file" class="input" name="fileInput">
-                <lable>Document Number:</lable>
-                <input type="text" name="docnum"/>
-                <button class="view-more-btn" id="viewMoreBtn">View Document</button>
-            </ul>
+                <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();"/>
+            </div>
         </div>
     <br/>
     <div class="purple">KYC- Non Documentary Verification</div>
     <br/><br/>
-        <lable>Document Type:</lable>
+    <div class="mini">
+        <label>Document Type:</label>
                 <select name="Document Type" id="dtype"> 
                     <option value="Credit report">Credit report</option> 
                     <option value="LexisNexis IDV">LexisNexis IDV</option>
@@ -160,9 +157,8 @@
                 </select>
         <label for="nonus-nondoc">Upload:</label>
         <input type="file" class="input" name="fileInput">
-        <lable>Document Number:</lable>
-        <input type="text" name="docnum"/>
-            <button class="view-more-btn" id="viewMoreBtn">View Document</button>
+        <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();"/>
+    </div>
     </form>
     <br/>
     <br/>
