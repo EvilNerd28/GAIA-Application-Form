@@ -25,8 +25,8 @@
                     <a href="non-us-entity.html">Non US Entity</a>
                 </div>
             </div>
-            <a href="spDD.html" class="button" id="spDDmain">spDD</a>
-            <a href="EDD.html" class="button">EDD</a>
+            <a href="spDD.html" class="button hover-info" data-info="KYC | 3.7 Specialized Due Diligence (SpDD)" id="spDDmain">spDD</a>
+            <a href="EDD.html" class="button hover-info" data-info="HIGH RISK ONBOARDING & REVIEW">EDD</a>
             <a href="OFAC.html" class="button">OFAC</a>
         </div>
     </nav>
@@ -40,12 +40,12 @@
         <input class="pb1" type="text" placeholder="Search">
     </div>
     <br/>
-    <div class="purple">
+    <div class="purple ">
         Documents for Arms and Ammunition Manufacturers, Retailers or Wholesaler
     </div>
     <br/>
     <div class="mini">
-        <lable>Document Type:</lable>
+        <label>Document Type:</label>
         <select name="Document Type" id="dtype"> 
             <option value="Federal-firearms-license">Federal firearms Licence</option> 
             <option value="nbc">Nature of business of its customers</option> 
@@ -53,8 +53,7 @@
         </select>
         <label for="arms-amo">Upload:</label>
         <input type="file" class="input" name="fileInput">
-        <lable>Document ID:</lable>
-        <input type="text" name="docID"/>
+        <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();"/>
     </div>
     <br/>
     <br/>
@@ -65,7 +64,7 @@
     </div>
     <br/>
     <div class="mini">
-        <lable>Document Type:</lable>
+        <label>Document Type:</label>
         <select name="Document Type" id="dtype"> 
             <option value="reg-FINRA">Registration status with FINRA</option> 
             <option value="PnS">Products and Services</option> 
@@ -74,8 +73,7 @@
         </select>
         <label for="broker-dealers">Upload:</label>
         <input type="file" class="input" name="fileInput">
-        <lable>Document ID:</lable>
-        <input type="text" name="docID"/>
+        <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();"/>
     </div>
     <br/>
     <br/>
@@ -89,7 +87,7 @@
     </div>
     <br/>
     <div class="mini">
-        <lable>Document Type:</lable>
+        <label>Document Type:</label>
         <select name="Document Type" id="dtype"> 
             <option value="ownership">Ownership</option> 
             <option value="license-and-reg">License and registration</option> 
@@ -102,8 +100,7 @@
         </select>
         <label for="casino-other">Upload:</label>
         <input type="file" class="input" name="fileInput">
-        <lable>Document ID:</lable>
-        <input type="text" name="docID"/>
+        <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();"/>
     </div>
     <br/>
     <br/>
@@ -117,7 +114,7 @@
     </div>
     <br/>
     <div class="mini">
-        <lable>Document Type:</lable>
+        <label>Document Type:</label>
         <select name="Document Type" id="dtypecbd"> 
             <option value="ptypes-n-CBD">Products types and products containing CBD</option> 
             <option value="certificate-of-analysts">Certificate of Analysts</option> 
@@ -125,8 +122,7 @@
         </select>
         <label for="cbd-related">Upload:</label>
         <input type="file" class="input" name="fileInput">
-        <lable>Document ID:</lable>
-        <input type="text" name="docID"/>
+        <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();"/>
     </div>
     <br/>
     <br/>
@@ -137,7 +133,7 @@
     </div>
     <br/>
     <div class="mini">
-        <lable>Document Type:</lable>
+        <label>Document Type:</label>
         <select name="Document Type" id="dtype"> 
             <option value="purpose-of-escrow">Purpose of Escrow</option> 
             <option value="escrow-inst">Escrow instructions</option> 
@@ -145,8 +141,7 @@
         </select>
         <label for="additional">Upload:</label>
         <input type="file" class="input" name="fileInput">
-        <lable>Document ID:</lable>
-        <input type="text" name="docID"/>
+        <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();"/>
     </div>
     <br/>
     <br/>
@@ -155,7 +150,7 @@
      </div>
      <br>
      <div class="mini">
-        <lable>Addtional Documents:</lable>
+        <label>Addtional Documents:</label>
         <select name="add-doc" id="addtype"> 
             <option value="">Any KYC Addendum Form(s) for each account requested, (if applicable)</option> 
             <option value="">High Risk Onboarding Checklist Form</option>
@@ -169,12 +164,11 @@
             <option value="">Open Source Search</option>
             <option value="">CLEAR search</option>
             <option value="">OFAC search (LexisNexis) & match</option>
-            <option value="">PEP match</option>
-            
+            <option value="">PEP match</option>  
         </select>
         <label for="additional">Upload:</label>
         <input type="file" class="input" name="fileInput">
-        <button class="view-more-btn" id="viewMoreBtn">View Document</button>
+        <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();"/>
     </div>
      <br/>
     <br/>
@@ -184,15 +178,15 @@
     <br/>
     <div class="spdd-grid">
         <div class="s result1">
-            <lable>CLEAR</lable>
+            <label>CLEAR</label>
             <input type="text" name="clear"/>
-            <lable>OPEN SOURCE</lable>
+            <label>OPEN SOURCE</label>
             <input type="text" name="opensource"/>
         </div>
         <div class="s result2">
-            <lable>OFAC</lable>
+            <label>OFAC</label>
             <input type="text" name="ofac"/>
-            <lable>PEP</lable>
+            <label>PEP</label>
             <input type="text" name="pep"/>
         </div>
     </div>
