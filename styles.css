@@ -241,10 +241,22 @@ nav a:visited,
 
 .mini {
     display: flex;
-    
     font-size: 18px;
     color: black;
+    justify-content: space-evenly;
+    align-items: center;
   }
+
+.mini input{
+    border: none;
+    border-radius: 10px;
+}
+.mini select{
+    height: 40px;
+    width: 180px;
+    border: none;
+    border-radius: 10px;
+}
 
 /*Entity*/
 
@@ -266,10 +278,24 @@ nav a:visited,
     color: black;
 }
 
+.file-input-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(100, 200, 125); 
+    color: #fff; 
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .file-input-label input[type="file"] {
+    display: none;
+  }
+
 .s input{
     width: 120px;
     border: none;
 }
+
 
 /*non us consumer*/
 
@@ -376,10 +402,12 @@ nav a:visited,
 .hover-info::after {
     content: attr(data-info);
     display: none;
-    position: absolute;
+    position: relative;
     background-color: #fff;
     color: black;
     padding: 5px;
+    height: auto;
+    font-size: 14px;
     border: 1px solid #ccc;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     z-index: 1;
