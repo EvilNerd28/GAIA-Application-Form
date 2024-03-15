@@ -44,90 +44,88 @@
     <div class="purple">Personal Information</div>
     <div class="gridA1">
         <div class="grid-itemA1 col1">
-          <label>Application ID:</label>
+          <label>Application ID</label>
             <input type="text" name="app-id"/>
-          <label>Middle Name:</label>
+          <label>Middle Name</label>
             <input type="text" name="mname"/>
-          <label>Gender:</label>
+          <label>Gender</label>
             <input type="text" name="gender"/>
-          <label>Street Address:</label>
+          <label>Street Address</label>
             <input type="text" name="add"/>
-          <label>Postal Code:</label>
+          <label>Postal Code</label>
             <input type="text" name="postal-code"/>
-          <label>ID Number:</label>
+          <label>ID Number</label>
             <input type="text" name="idno"/>
         </div>
         <div class="grid-itemA1 col2">
-          <label>Account Type:</label>
+          <label>Account Type</label>
             <input type="text" name="acc-type"/>
-          <label>Last Name:</label>
+          <label>Last Name</label>
             <input type="text" name="lname"/>
-          <label>Email:</label>
+          <label>Email</label>
             <input type="email" name="email"/>
-          <label>City:</label>
+          <label>City</label>
             <input type="text" name="city"/>
-          <label>Country:</label>
+          <label>Country</label>
             <input type="text" name="country"/>
-          <label>Entity Full Name:</label>
+          <label>Entity Full Name</label>
             <input type="text" name="entity-name"/>
         </div>           
         <div class="grid-itemA1 col3">
-          <label>First Name:</label>
+          <label>First Name</label>
             <input type="text" name="fname"/>
-          <label>Birth Date:</label>
+          <label>Birth Date</label>
             <input type="date" name="date"/>
-          <label>Phone:</label>
+          <label>Phone</label>
             <input type="number" name="phn"/>
-          <label>State:</label>
+          <label>State</label>
             <input type="text" name="state"/>
-          <label>ID Type:</label>
+          <label>ID Type</label>
             <input type="text" name="id-type"/>
-          <label>Business Category:</label>
+          <label>Business Category</label>
             <input type="text" name="b-cat"/>
         </div>        
     </div>
-    <div class="miniflex"><label>SIGNATORIES</label></div>
-    <br>
-    <button class="view-more-btn" id="viewMoreBtn">View More</button>
-    <br><br><br/><br/>
+    <div class="miniflex"><label>SIGNATORIES</label>
+    <img src="lens.png" height="35px" width="35px" class="hover-info" data-info="View Document" onclick="openModal()">
+  </div><br><br><br/><br/>
     <div class="sub-grid">
         <div class="sub-grid-item colx">
-          <label>KYC ID:</label>
+          <label>KYC ID</label>
             <input type="text" name="kycID"/>
-          <label>EDD Score:</label>
+          <label>EDD Score</label>
             <input type="text" name="eddscore"/>
-          <label>SDN Score:</label>
+          <label>SDN Score</label>
             <input type="text" name="sdnscore"/>
         </div>
         <div class="sub-grid-item coly">
-          <label>SPDD Score:</label>
+          <label>SPDD Score</label>
             <input type="text" name="spddscore"/>
-          <label>OFAC Score:</label>
+          <label>OFAC Score</label>
             <input type="text" name="ofacscore"/>
-          <label>Bsuiness Category:</label>
+          <label>Bsuiness Category</label>
             <input type="text" name="bcat"/>
         </div>
         <div class="sub-grid-item colz">
-          <label>CDD Score:</label>
+          <label>CDD Score</label>
             <input type="text" name="cddscore"/>
-          <label>PEP Score:</label>
+          <label>PEP Score</label>
             <input type="text" name="pepscore"/>
-          <label>NAICS Code:</label>
+          <label>NAICS Code</label>
             <input type="text" name="naics"/>
         </div>
     </div>
     <br>
-    <div class="miniflex"><label>Parties associated with consumer:</label></div>
-    <br>
-    <button class="view-more-btn" id="viewMoreBtn">View More</button>
-  <br><br><br/>
+    <div class="miniflex"><label>Parties associated with consumer</label>
+    <img src="lens.png" height="35px" width="35px" class="hover-info" data-info="View Document" onclick="openModal()">
+  </div><br><br><br/>
   <div class="purple">KYC- Documentary Verification</div>
   <br/>
   <div class="rowB1">
     <div class="sub1">Primary Documentation</div>
       <br/>
       <div class="mini">
-        <label>Document Type:</label>
+        <label>Document Type</label>
         <select name="Document Type" id="dtype"> 
             <option value=""></option>
             <option value="">Government issued business license</option>
@@ -139,7 +137,7 @@
             <option value="">Agreement (Unincorporated Association)</option>
             <option value="">Agreement (Unincorporated Association)</option> 
           </select>
-          <label for="non-ent-primary">Upload:</label>
+          <label for="non-ent-primary">Upload</label>
           <input type="file" class="input" name="fileInput">
           <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();"/>
         </div>
@@ -148,14 +146,14 @@
     <div class="purple">KYC- Non Documentary Verification</div>
       <br/><br/>
       <div class="mini">
-          <label>Document Type:</label>
+          <label>Document Type</label>
             <select name="Document Type" id="dtype"> 
               <option value="Credit report">Credit report</option> 
               <option value="LexisNexis IDV">LexisNexis IDV</option>
               <option value="Tax return">Tax return</option>
               <option value="audit">Audited financial statement</option>
             </select>
-          <label for="non-doctype-primary">Upload:</label>
+          <label for="non-doctype-primary">Upload</label>
             <input type="file" class="input" name="fileInput">
             <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();"/>
       </div>  
