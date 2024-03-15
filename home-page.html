@@ -91,7 +91,7 @@
             <div class="sub1 hover-info" data-info="3.2.4.1 CIP Verification">Primary Documentation</div>
             <br/>
             <div class="mini">
-                <lable>Document Type</lable>
+                <label>Document Type</label>
                 <select name="Document Type" id="dtype"> 
                     <option value="Driver's Licence">Driver's Licence</option> 
                     <option value="Passport">Passport</option> 
@@ -101,18 +101,17 @@
                     <option value="Permanent Resident Card">Permanent Resident Card</option>
                 </select>
                 <label for="doctype-primary">Upload</label>
-                <input type="file" class="input" name="fileInput">
-                <img src="lens.png" height="40px" width="40px"/>
-                <button class="view-more-btn" id="viewMoreBtn" type="button" onclick="openImage()">View Document</button>
+                <input type="file" class="input" id="fileInput" name="fileInput">
+                <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="openModal()">
                 <!-- The Modal -->
                 <div id="myModal" class="modal">
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <span class="close" onclick="closeImage()">&times;</span>
-                    <img id="modalImage" alt="Document Image">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <img id="modalImage" alt="Document Image" style="width:100%">
+                    </div>
                 </div>
-                </div>
-            </div>
+            </div>            
             <br/>
             <br/>
             <div class="sub1 hover-info" data-info="3.2.4.2 CIP Verification">Secondary Documentation</div>
@@ -128,8 +127,7 @@
                 </select>
                 <label for="doctype-secondary">Upload</label>
                 <input type="file" class="input" name="fileInput">
-                <img src="lens.png" height="40px" width="40px"/>
-                <button class="view-more-btn" id="viewMoreBtn">View Document</button>
+                <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();" />
             </div>
         </div>
         <br/><br><br>
@@ -148,8 +146,7 @@
                     </select>
             <label for="non-doctype-primary">Upload</label>
             <input type="file" class="input" name="fileInput">
-            <img src="lens.png" height="40px" width="40px"/>
-            <button class="view-more-btn" id="viewMoreBtn">View Document</button>
+            <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();" />
         </div>
         <br>
     </form>
