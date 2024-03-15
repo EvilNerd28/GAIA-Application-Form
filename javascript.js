@@ -35,32 +35,6 @@ function redirectOnChange() {
   }
 }
 
-function openImage() {
-  // Get the modal and image elements
-  var modal = document.getElementById("myModal");
-  var modalImage = document.getElementById("modalImage");
-
-  // Set the source for the modal image
-  modalImage.src = 'RS_Decline_in_Driver_s_Licenses.jpg'; // Replace with the actual path
-
-  // Display the modal
-  modal.style.display = "block";
-}
-
-function closeImage() {
-  // Get the modal element and hide it
-  var modal = document.getElementById("myModal");
-  modal.style.display = "none";
-}
-
-// Close the modal if the user clicks outside the modal content
-window.onclick = function(event) {
-  var modal = document.getElementById("myModal");
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
-
 // hover-info.js
 
 function applyHoverInfoBehavior() {
@@ -68,3 +42,32 @@ function applyHoverInfoBehavior() {
 }
 
 document.addEventListener('DOMContentLoaded', applyHoverInfoBehavior);
+
+//VIEW DOCUMENT (LENS)
+
+// Function to open the modal and update the image source
+function openModal() {
+  // Get the parent element of the lens icon
+  var parentElement = document.querySelector('.hover-info').parentNode;
+  // Find the input element within the parent element
+  var input = parentElement.querySelector('.input');
+  // Check if a file is selected
+  if (input.files && input.files[0]) {
+      var reader = new FileReader();
+      reader.onload = function(e) {
+          // Update the modal image source
+          document.getElementById("modalImage").src = e.target.result;
+          // Display the modal
+          document.getElementById("myModal").style.display = "block";
+      }
+      reader.readAsDataURL(input.files[0]);
+  } else {
+      // Handle if no file is selected
+      console.log("No file selected!");
+  }
+}
+
+
+
+
+
