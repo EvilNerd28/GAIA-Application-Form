@@ -105,17 +105,17 @@
                 <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="openModal()">
                 <!-- The Modal -->
                 <div id="myModal" class="modal">
-                    <!-- Modal content -->
-                    <div class="modal-content">
-                        <span class="close" onclick="closeModal()">&times;</span>
-                        <img id="modalImage" alt="Document Image" style="width:100%">
-                    </div>
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img id="modalImage" alt="Document Image" style="width:100%">
+                </div>
                 </div>
             </div>            
             <br/>
             <br/>
             <div class="sub1 hover-info" data-info="3.2.4.2 CIP Verification">Secondary Documentation</div>
-            <br/><div class="mini">
+            <div class="mini">
                 <label>Document Type</label>
                 <select name="Document Type" id="dtype"> 
                     <option value="Driver's Licence">Driver's Licence</option> 
@@ -129,25 +129,24 @@
                 <input type="file" class="input" name="fileInput">
                 <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();" />
             </div>
-        </div>
-        <br/><br><br>
-        <div class="purple hover-info" data-info="3.2.4.2 Non-Documentary Verification">KYC- Non Documentary Verification</div>
-        <br/>
-        <div class="mini">
-            <label>Document Type</lable>
-                    <select name="Document Type" id="dtype"> 
-                        <option value="Credit report">Credit report</option> 
-                        <option value="LexisNexis IDV">LexisNexis IDV</option>
-                        <option value="Tax return">Tax return</option>
-                        <option value="Pay stub">Pay stub</option>
-                        <option value="Utility bill">Utility bill</option>
-                        <option value="Mortgage statement">Mortgage statement</option>
-                        <option value="Account statement from previous bank">Account statement from previous bank</option>
-                    </select>
-            <label for="non-doctype-primary">Upload</label>
-            <input type="file" class="input" name="fileInput">
-            <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();" />
-        </div>
+            <br/><br><br>
+            <div class="purple hover-info" data-info="3.2.4.2 Non-Documentary Verification">KYC- Non Documentary Verification</div><br>
+            <div class="mini">
+                <label>Document Type</label>
+                <select name="Document Type" id="dtype"> 
+                    <option value="Credit report">Credit report</option> 
+                    <option value="LexisNexis IDV">LexisNexis IDV</option>
+                    <option value="Tax return">Tax return</option>
+                    <option value="Pay stub">Pay stub</option>
+                    <option value="Utility bill">Utility bill</option>
+                    <option value="Mortgage statement">Mortgage statement</option>
+                    <option value="Account statement from previous bank">Account statement from previous bank</option>
+                </select>
+                <label for="non-doctype-primary">Upload</label>
+                <input type="file" class="input" name="fileInput">
+                <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();" />
+            </div>
+
         <br>
     </form>
     <br/>
