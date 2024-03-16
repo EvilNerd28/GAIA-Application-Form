@@ -38,33 +38,54 @@ function redirectOnChange() {
 // hover-info.js
 
 function applyHoverInfoBehavior() {
+  const hoverInfoElements = document.querySelectorAll('.hover-info');
+
+  hoverInfoElements.forEach(element => {
+    element.addEventListener('mouseover', function() {
+      const dataInfo = this.dataset.info; // Use dataset.info for modern browsers
+      const tooltip = document.createElement('div');
+      tooltip.classList.add('hover-info-tooltip'); // Add a class for styling
+      tooltip.textContent = dataInfo;
+
+      // Improved positioning using offsetParent and clientWidth/clientHeight
+      const tooltipLeft = this.offsetLeft + this.clientWidth + 10; // Add some padding
+      const tooltipTop = this.offsetTop;
+
+      tooltip.style.left = `${tooltipLeft}px`;
+      tooltip.style.top = `${tooltipTop}px`;
+
+      document.body.appendChild(tooltip);
+    });
+
+    element.addEventListener('mouseout', function() {
+      const tooltips = document.querySelectorAll('.hover-info-tooltip');
+      tooltips.forEach(tooltip => tooltip.remove());
+    });
+  });
+
   console.log('Hover info behavior applied!');
 }
 
-document.addEventListener('DOMContentLoaded', applyHoverInfoBehavior);
+applyHoverInfoBehavior();
+
 
 //VIEW DOCUMENT (LENS)
 
-// Function to open the modal and update the image source
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal
+var img = document.getElementById("modalImage");
+var modalImg = document.getElementById("modalImage");
+
 function openModal() {
-  // Get the parent element of the lens icon
-  var parentElement = document.querySelector('.hover-info').parentNode;
-  // Find the input element within the parent element
-  var input = parentElement.querySelector('.input');
-  // Check if a file is selected
-  if (input.files && input.files[0]) {
-      var reader = new FileReader();
-      reader.onload = function(e) {
-          // Update the modal image source
-          document.getElementById("modalImage").src = e.target.result;
-          // Display the modal
-          document.getElementById("myModal").style.display = "block";
-      }
-      reader.readAsDataURL(input.files[0]);
-  } else {
-      // Handle if no file is selected
-      console.log("No file selected!");
-  }
+  modal.style.display = "block";
+  modalImg.src = "RS_Decline_in_Driver_s_Licenses.jpg"; 
+}
+
+// Close the modal when the user clicks on <span> (x)
+function closeModal() {
+  modal.style.display = "none";
 }
 
 
