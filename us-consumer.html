@@ -17,7 +17,7 @@
     <nav>
         <div class="flex-container">
             <div class="dropdown" id="kycDropdown">
-                <a href="#" class="highlight hover-info" data-info="KYC | 3.11 CUSTOMER TYPES" onclick="toggleDropdown()" id="kyc-button">Us Consumer</a>
+                <a href="#" class="highlight hover-info" data-info="KYC | 3.11 CUSTOMER TYPES" onclick="toggleDropdown()" id="kyc-button">US Consumer</a>
                 <div class="dropdown-content">
                     <a href="us-consumer.html" class="hover-info" data-info="1.1 US Consumer">US Consumer</a>
                     <a href="non-us-consumer.html" class="hover-info" data-info="1.2 Non US Consumer">Non US Consumer</a>
@@ -131,24 +131,22 @@
             </div>
         </div>
         <br/><br><br>
-        <div class="purple hover-info" data-info="3.2.4.2 Non-Documentary Verification">KYC- Non Documentary Verification</div>
-        <br/>
-        <div class="mini">
-            <label>Document Type</lable>
-                    <select name="Document Type" id="dtype"> 
-                        <option value="Credit report">Credit report</option> 
-                        <option value="LexisNexis IDV">LexisNexis IDV</option>
-                        <option value="Tax return">Tax return</option>
-                        <option value="Pay stub">Pay stub</option>
-                        <option value="Utility bill">Utility bill</option>
-                        <option value="Mortgage statement">Mortgage statement</option>
-                        <option value="Account statement from previous bank">Account statement from previous bank</option>
-                    </select>
-            <label for="non-doctype-primary">Upload</label>
-            <input type="file" class="input" name="fileInput">
-            <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();" />
-            
-        </div>
+        <div class="purple hover-info" data-info="3.2.4.2 Non-Documentary Verification">KYC- Non Documentary Verification</div><br>
+            <div class="mini">
+                <label>Document Type</label>
+                <select name="Document Type" id="dtype"> 
+                    <option value="Credit report">Credit report</option> 
+                    <option value="LexisNexis IDV">LexisNexis IDV</option>
+                    <option value="Tax return">Tax return</option>
+                    <option value="Pay stub">Pay stub</option>
+                    <option value="Utility bill">Utility bill</option>
+                    <option value="Mortgage statement">Mortgage statement</option>
+                    <option value="Account statement from previous bank">Account statement from previous bank</option>
+                </select>
+                <label for="non-doctype-primary">Upload</label>
+                <input type="file" class="input" name="fileInput">
+                <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();" />
+            </div>
         <br>
     </form>
     <br/>
