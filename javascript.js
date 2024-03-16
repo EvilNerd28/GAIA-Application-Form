@@ -13,7 +13,7 @@ function toggleDropdown() {
   dropdown.classList.toggle("show");
 }
 
-// Close the dropdown if the user clicks outside of it
+// Close the dropdown 
 window.onclick = function(event) {
   if (!event.target.matches('.highlight')) {
       var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -73,10 +73,8 @@ window.addEventListener('DOMContentLoaded', applyHoverInfoBehavior);
 
 //VIEW DOCUMENT (LENS)
 
-// Get the modal
 var modal = document.getElementById("myModal");
 
-// Get the image and insert it inside the modal
 var img = document.getElementById("modalImage");
 var modalImg = document.getElementById("modalImage");
 
@@ -85,7 +83,7 @@ function openModal() {
   modalImg.src = "RS_Decline_in_Driver_s_Licenses.jpg"; 
 }
 
-// Close the modal when the user clicks on <span> (x)
+// Closing the modal
 function closeModal() {
   modal.style.display = "none";
 }
