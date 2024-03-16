@@ -42,13 +42,13 @@ function applyHoverInfoBehavior() {
 
   hoverInfoElements.forEach(element => {
     element.addEventListener('mouseover', function() {
-      const dataInfo = this.dataset.info; // Use dataset.info for modern browsers
+      const dataInfo = this.dataset.info; 
       const tooltip = document.createElement('div');
-      tooltip.classList.add('hover-info-tooltip'); // Add a class for styling
+      tooltip.classList.add('hover-info-tooltip'); 
       tooltip.textContent = dataInfo;
 
-      // Improved positioning using offsetParent and clientWidth/clientHeight
-      const tooltipLeft = this.offsetLeft + this.clientWidth + 10; // Add some padding
+      
+      const tooltipLeft = this.offsetLeft + this.clientWidth + 10; 
       const tooltipTop = this.offsetTop;
 
       tooltip.style.left = `${tooltipLeft}px`;
@@ -66,7 +66,9 @@ function applyHoverInfoBehavior() {
   console.log('Hover info behavior applied!');
 }
 
-applyHoverInfoBehavior();
+
+window.addEventListener('DOMContentLoaded', applyHoverInfoBehavior);
+
 
 
 //VIEW DOCUMENT (LENS)
