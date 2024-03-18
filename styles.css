@@ -405,6 +405,7 @@ nav a:visited,
 
  /*HOVER*/
 
+ 
 .hover-info::after {
     content: attr(data-info);
     display: none;
@@ -414,8 +415,7 @@ nav a:visited,
     padding: 5px;
     height: auto;
     font-size: 14px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
     z-index: 1;
 }
 
@@ -429,6 +429,19 @@ nav a:visited,
     display: block;
     text-decoration: black;
 }
+
+
+
+/* Tooltip styles */ 
+.tooltip {
+    position: absolute;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 9999;
+    font-size: 14px;
+    color: black;
+  }
 
 /*VIEW DOCUMENT*/
 
