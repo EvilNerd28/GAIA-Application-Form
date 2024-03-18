@@ -3,7 +3,6 @@
     <meta charset="UTF-8"/>
     <title>GAIA-Application-Homepage</title>
     <link href="styles.css" rel="stylesheet" type="text/css"/>
-    <script src="javascript.js"></script>
 </head>
 <body>
     <header>
@@ -32,12 +31,14 @@
     </nav>
     <hr/>
     <div class="p1">
-        <select name="Choose customer type" class="pa1 hover-info" data-info="KYC | ACCOUNT TYPE" id="customerType" placeholder="Choose customer type" onchange="redirectOnChange()">
+        <div class="hover-info" data-info="KYC | ACCOUNT TYPE">
+        <select name="Choose customer type" class="pa1" id="customerType" placeholder="Choose customer type" onchange="redirectOnChange()">
             <option value="Choose customer type">Choose customer type</option>  
             <option value="New-Application">New Application</option> 
             <option value="Existing-customer">Existing customer</option> 
             <option value="Pending-customer">Pending customer</option> 
-        </select>                 
+        </select> 
+    </div>                
         <input class="pb1" type="text" placeholder="Search">
     </div>
     <br/>
@@ -46,41 +47,41 @@
         <div class="purple">Personal Information</div>
         <div class="gridA1">
             <div class="grid-itemA1 col1">
-                <lable class="hover-info" data-info="Application ID">Application ID</lable>
+                <label class="hover-info" data-info="Application ID">Application ID</label>
                     <input type="text" name="app-id" />
-                <lable class="hover-info" data-info="3.2.3 CIP Information">Middle Name</lable>
+                <label class="hover-info" data-info="3.2.3 CIP Information">Middle Name</label>
                     <input type="text" name="mname" />
-                <lable class="hover-info" data-info="3.2.3 CIP Information">Gender</lable>
+                <label class="hover-info" data-info="3.2.3 CIP Information">Gender</label>
                     <input type="text" name="gender"/>
-                <lable class="hover-info" data-info="3.2.3 CIP Information">Street Address</lable>
+                <label class="hover-info" data-info="3.2.3 CIP Information">Street Address</label>
                     <input type="text" name="add"/>
-                <lable class="hover-info" data-info="3.2.3 CIP Information">Postal Code</lable>
+                <label class="hover-info" data-info="3.2.3 CIP Information">Postal Code</label>
                     <input type="text" name="postal-code"/>
             </div>
             <div class="grid-itemA1 col2">
-                <lable class="hover-info" data-info="3.2.3 CIP Information">Account Type</lable>
+                <label class="hover-info" data-info="3.2.3 CIP Information">Account Type</label>
                     <input type="text" name="acc-type"/>
-                <lable class="hover-info" data-info="3.2.3 CIP Information">Last Name</lable>
+                <label class="hover-info" data-info="3.2.3 CIP Information">Last Name</label>
                     <input type="text" name="lname"/>
-                <lable  class="hover-info" data-info="3.2.3 CIP Information">Email</lable>
+                <label  class="hover-info" data-info="3.2.3 CIP Information">Email</label>
                     <input type="email" name="email"/>
-                <lable class="hover-info" data-info="3.2.3 CIP Information">City</lable>
+                <label class="hover-info" data-info="3.2.3 CIP Information">City</label>
                     <input type="text" name="city"/>
-                <lable class="hover-info" data-info="3.2.3 CIP Information">Country</lable>
+                <label class="hover-info" data-info="3.2.3 CIP Information">Country</label>
                     <input type="text" name="country"/>
-                <lable class="hover-info" data-info="3.2.3 CIP Information">ID Number</lable>
+                <label class="hover-info" data-info="3.2.3 CIP Information">ID Number</label>
                     <input type="text" name="idno"/>
             </div>           
             <div class="grid-itemA1 col3">
-                <lable class="hover-info" data-info="3.2.3 CIP Information">First Name</lable>
+                <label class="hover-info" data-info="3.2.3 CIP Information">First Name</label>
                     <input type="text" name="fname"/>
-                <lable class="hover-info" data-info="3.2.3 CIP Information">Birth Date</lable>
+                <label class="hover-info" data-info="3.2.3 CIP Information">Birth Date</label>
                     <input type="date" name="date"/>
-                <lable class="hover-info" data-info="3.2.3 CIP Information">Phone</lable>
+                <label class="hover-info" data-info="3.2.3 CIP Information">Phone</label>
                     <input type="number" name="phn"/>
-                <lable class="hover-info" data-info="3.2.3 CIP Information">State</lable>
+                <label class="hover-info" data-info="3.2.3 CIP Information">State</label>
                     <input type="text" name="state"/>
-                <lable class="hover-info" data-info="3.2.3 CIP Information">ID Type</lable>
+                <label class="hover-info" data-info="3.2.3 CIP Information">ID Type</label>
                     <input type="text" name="id-type"/>
             </div>        
         </div>
@@ -102,7 +103,7 @@
                 </select>
                 <label for="doctype-primary">Upload</label>
                 <input type="file" class="input" id="fileInput" name="fileInput">
-                <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="openModal()">
+                <img src="lens.png" height="40px" width="40px" class="hover-info-image" data-info="View Document" onclick="openModal()" onmouseover="showTooltip(this)" onmouseout="hideTooltip()">
                 <!-- The Modal -->
                 <div id="myModal" class="modal">
                 <!-- Modal content -->
@@ -127,7 +128,7 @@
                 </select>
                 <label for="doctype-secondary">Upload</label>
                 <input type="file" class="input" name="fileInput">
-                <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();" />
+                <img src="lens.png" height="40px" width="40px" class="hover-info-image" data-info="View Document" onclick="viewSecondary()" onmouseover="showTooltip(this)" onmouseout="hideTooltip()"/>
             </div>
             <br/><br><br>
             <div class="purple hover-info" data-info="3.2.4.2 Non-Documentary Verification">KYC- Non Documentary Verification</div><br>
@@ -144,7 +145,7 @@
                 </select>
                 <label for="non-doctype-primary">Upload</label>
                 <input type="file" class="input" name="fileInput">
-                <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();" />
+                <img src="lens.png" height="40px" width="40px" class="hover-info-image" data-info="View Document" onclick="viewKYC()" onmouseover="showTooltip(this)" onmouseout="hideTooltip()">       
             </div>
 
         <br>
@@ -153,5 +154,6 @@
     <br/>
     <br/>
     <br/>
+    <script src="javascript.js"></script>
 </body>
 </html>
