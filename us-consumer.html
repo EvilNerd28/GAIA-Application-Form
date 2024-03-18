@@ -32,12 +32,14 @@
     </nav>
     <hr/>
     <div class="p1">
-        <select name="Choose customer type" class="pa1 hover-info" data-info="KYC | ACCOUNT TYPE" id="customerType" placeholder="Choose customer type" onchange="redirectOnChange()">
+        <div class="hover-info" data-info="KYC | ACCOUNT TYPE">
+        <select name="Choose customer type" class="pa1" id="customerType" placeholder="Choose customer type" onchange="redirectOnChange()">
             <option value="Choose customer type">Choose customer type</option>  
             <option value="New-Application">New Application</option> 
             <option value="Existing-customer">Existing customer</option> 
             <option value="Pending-customer">Pending customer</option> 
-        </select>                 
+        </select> 
+    </div>                
         <input class="pb1" type="text" placeholder="Search">
     </div>
     <br/>
@@ -102,13 +104,13 @@
                 </select>
                 <label for="doctype-primary">Upload</label>
                 <input type="file" class="input" name="fileInput">
-                <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();"/>
+                <img src="lens.png" height="40px" width="40px" class="hover-info-image" data-info="View Document" onclick="openModal()" onmouseover="showTooltip(this)" onmouseout="hideTooltip()">
                 <!-- The Modal -->
                 <div id="myModal" class="modal">
                 <!-- Modal content -->
                 <div class="modal-content">
-                    <span class="close" onclick="closeImage()">&times;</span>
-                    <img id="modalImage" alt="Document Image">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img id="modalImage" alt="Document Image" style="width:100%">
                 </div>
                 </div>
             </div>
