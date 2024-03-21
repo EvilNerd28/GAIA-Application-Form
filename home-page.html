@@ -101,17 +101,24 @@
                     <option value="U.S Alien Registration Card">U.S Alien Registration Card</option>
                     <option value="Permanent Resident Card">Permanent Resident Card</option>
                 </select>
-                <label for="doctype-primary">Upload</label>
-                <input type="file" class="input" id="fileInput" name="fileInput">
+                <label class="file-input-label">
+                    <label class="button-container hover-info" data-info="Upload a file">
+                        <input type="file" class="input" id="fileInput" name="fileInput">
+                        <img src="upload-icon.png" alt="Image" class="image">
+                        <span class="button">Upload</span>    
+                    </label>
+                </label>
+                
                 <img src="lens.png" height="40px" width="40px" class="hover-info-image" data-info="View Document" onclick="openModal()" onmouseover="showTooltip(this)" onmouseout="hideTooltip()">
+                
                 <!-- The Modal -->
                 <div id="myModal" class="modal">
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal()">&times;</span>
-                    <img id="modalImage" alt="Document Image" style="width:100%">
-                </div>
-                </div>
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <a id="modalLink" alt="Document Link" style="display: none;">Download Document</a>
+                    </div>
+                </div>                  
             </div>            
             <br/>
             <br/>
@@ -126,8 +133,13 @@
                     <option value="U.S Alien Registration Card">U.S Alien Registration Card</option>
                     <option value="Permanent Resident Card">Permanent Resident Card</option>
                 </select>
-                <label for="doctype-secondary">Upload</label>
-                <input type="file" class="input" name="fileInput">
+                <label class="file-input-label">
+                    <label class="button-container hover-info" data-info="Upload a file">
+                        <input type="file" class="input" name="fileInput">
+                        <img src="upload-icon.png" alt="Image" class="image">
+                        <span class="button">Upload</span>    
+                    </label>
+                </label>
                 <img src="lens.png" height="40px" width="40px" class="hover-info-image" data-info="View Document" onclick="viewSecondary()" onmouseover="showTooltip(this)" onmouseout="hideTooltip()"/>
             </div>
             <br/><br><br>
@@ -143,8 +155,13 @@
                     <option value="Mortgage statement">Mortgage statement</option>
                     <option value="Account statement from previous bank">Account statement from previous bank</option>
                 </select>
-                <label for="non-doctype-primary">Upload</label>
-                <input type="file" class="input" name="fileInput">
+                <label class="file-input-label">
+                    <label class="button-container hover-info" data-info="Upload a file">
+                        <input type="file" class="input" name="fileInput">
+                        <img src="upload-icon.png" alt="Image" class="image">
+                        <span class="button">Upload</span>    
+                    </label>
+                </label>
                 <img src="lens.png" height="40px" width="40px" class="hover-info-image" data-info="View Document" onclick="viewKYC()" onmouseover="showTooltip(this)" onmouseout="hideTooltip()">       
             </div>
 
