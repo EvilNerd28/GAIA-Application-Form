@@ -1,23 +1,3 @@
-/* NOTES:
- * The two functions below have been commented out as they call things that have not been initialized yet
- * Make sure the script is run at the end of the body, this will at least make sure everything is initialized before it is called
- * The functions have been replaced by functions with onclicks instead (bad process, simple design), as shown below
- * Finish view secondary and view KYC to actually implement the wanted functionality
-*/
-
-/* REMOVED:
-document.getElementById("camera-input").addEventListener("change", function(event) {
-    // Process captured image here (preview, upload to server)
-    const file = event.target.files[0];
-});
-
-document.getElementById('viewMoreBtn').addEventListener('click', function() {
-  //console.log("ran view more")
-  var content = document.querySelector('.content');
-  content.style.maxHeight = content.style.maxHeight === '200px' ? null : '200px'; // Adjust the height accordingly
-});
-*/
-
 // Function to handle clicking on the lens image for Secondary documentation
 function viewSecondary() {
   // TODO: display secondary documentation
@@ -131,20 +111,32 @@ window.addEventListener('DOMContentLoaded', applyHoverInfoBehavior);
 
 //VIEW DOCUMENT (LENS)
 
-var modal = document.getElementById("myModal");
-
-var img = document.getElementById("modalImage");
-var modalImg = document.getElementById("modalImage");
+var modalLink = document.getElementById("modalLink");
 
 function openModal() {
-  modal.style.display = "block";
-  modalImg.src = "RS_Decline_in_Driver_s_Licenses.jpg"; 
+  // Get the uploaded file input element
+  var fileInput = document.getElementById("fileInput");
+  
+  // Check if a file is selected
+  if (fileInput.files.length > 0) {
+    // Get the first file from the input
+    var file = fileInput.files[0];
+    
+    // Create a URL for the uploaded file
+    var fileURL = URL.createObjectURL(file);
+    
+    // Set the modal link href to the uploaded file URL with target="_blank"
+    modalLink.href = fileURL;
+    modalLink.target = "_blank"; // Open in a new tab or window
+    
+    // Trigger click event on the link to open it in a new page
+    modalLink.click();
+  } else {
+    // If no file is selected, alert the user
+    alert("Please upload a file first.");
+  }
 }
 
-// Closing the modal
-function closeModal() {
-  modal.style.display = "none";
-}
 
 
 
