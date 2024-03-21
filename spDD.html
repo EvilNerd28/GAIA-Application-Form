@@ -27,7 +27,7 @@
             </div>
             <a href="spDD.html" class="button hover-info" data-info="KYC | 3.7 Specialized Due Diligence (SpDD)" id="spDDmain">spDD</a>
             <a href="EDD.html" class="button hover-info" data-info="HIGH RISK ONBOARDING & REVIEW">EDD</a>
-            <a href="OFAC.html" class="button">OFAC</a>
+            <a class="button" id="ofacmain">OFAC</a>
         </div>
     </nav>
     <hr/>
@@ -45,14 +45,19 @@
     </div>
     <br/>
     <div class="mini">
-        <label>Document Type:</label>
+        <label>Document Type</label>
         <select name="Document Type" id="dtype"> 
             <option value="Federal-firearms-license">Federal firearms Licence</option> 
             <option value="nbc">Nature of business of its customers</option> 
             <option value="Det-marketed">Determine how it is marketed</option> 
         </select>
-        <label for="arms-amo">Upload:</label>
-        <input type="file" class="input" name="fileInput">
+        <label class="file-input-label">
+            <label class="button-container hover-info" data-info="Upload a file">
+                <input type="file" class="input" name="fileInput">
+                <img src="upload-icon.png" alt="Image" class="image">
+                <span class="button">Upload</span>    
+            </label>
+        </label>
         <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();"/>
     </div>
     <br/>
@@ -64,15 +69,20 @@
     </div>
     <br/>
     <div class="mini">
-        <label>Document Type:</label>
+        <label>Document Type</label>
         <select name="Document Type" id="dtype"> 
             <option value="reg-FINRA">Registration status with FINRA</option> 
             <option value="PnS">Products and Services</option> 
             <option value="client-base">Client base</option> 
             <option value="customer-procedures">Customer procedures clients and whether clients can open accounts online</option> 
         </select>
-        <label for="broker-dealers">Upload:</label>
-        <input type="file" class="input" name="fileInput">
+        <label class="file-input-label">
+            <label class="button-container hover-info" data-info="Upload a file">
+                <input type="file" class="input" name="fileInput">
+                <img src="upload-icon.png" alt="Image" class="image">
+                <span class="button">Upload</span>    
+            </label>
+        </label>
         <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();"/>
     </div>
     <br/>
@@ -87,7 +97,7 @@
     </div>
     <br/>
     <div class="mini">
-        <label>Document Type:</label>
+        <label>Document Type</label>
         <select name="Document Type" id="dtype"> 
             <option value="ownership">Ownership</option> 
             <option value="license-and-reg">License and registration</option> 
@@ -98,8 +108,13 @@
             <option value="prod-n-services">Products and services</option> 
             <option value="fin-services-offered">Types of financial services offered</option>
         </select>
-        <label for="casino-other">Upload:</label>
-        <input type="file" class="input" name="fileInput">
+        <label class="file-input-label">
+            <label class="button-container hover-info" data-info="Upload a file">
+                <input type="file" class="input" name="fileInput">
+                <img src="upload-icon.png" alt="Image" class="image">
+                <span class="button">Upload</span>    
+            </label>
+        </label>
         <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();"/>
     </div>
     <br/>
@@ -114,14 +129,19 @@
     </div>
     <br/>
     <div class="mini">
-        <label>Document Type:</label>
+        <label>Document Type</label>
         <select name="Document Type" id="dtypecbd"> 
             <option value="ptypes-n-CBD">Products types and products containing CBD</option> 
             <option value="certificate-of-analysts">Certificate of Analysts</option> 
             <option value="testing-schedule">Testing Schedule</option> 
         </select>
-        <label for="cbd-related">Upload:</label>
-        <input type="file" class="input" name="fileInput">
+        <label class="file-input-label">
+            <label class="button-container hover-info" data-info="Upload a file">
+                <input type="file" class="input" name="fileInput">
+                <img src="upload-icon.png" alt="Image" class="image">
+                <span class="button">Upload</span>    
+            </label>
+        </label>
         <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();"/>
     </div>
     <br/>
@@ -133,14 +153,19 @@
     </div>
     <br/>
     <div class="mini">
-        <label>Document Type:</label>
+        <label>Document Type</label>
         <select name="Document Type" id="dtype"> 
             <option value="purpose-of-escrow">Purpose of Escrow</option> 
             <option value="escrow-inst">Escrow instructions</option> 
             <option value="agent-or-company">Agent or Company - Agent Business</option>  
         </select>
-        <label for="additional">Upload:</label>
-        <input type="file" class="input" name="fileInput">
+        <label class="file-input-label">
+            <label class="button-container hover-info" data-info="Upload a file">
+                <input type="file" class="input" name="fileInput">
+                <img src="upload-icon.png" alt="Image" class="image">
+                <span class="button">Upload</span>    
+            </label>
+        </label>
         <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();"/>
     </div>
     <br/>
@@ -150,7 +175,7 @@
      </div>
      <br>
      <div class="mini">
-        <label>Addtional Documents:</label>
+        <label>Addtional Documents</label>
         <select name="add-doc" id="addtype"> 
             <option value="">Any KYC Addendum Form(s) for each account requested, (if applicable)</option> 
             <option value="">High Risk Onboarding Checklist Form</option>
@@ -166,8 +191,13 @@
             <option value="">OFAC search (LexisNexis) & match</option>
             <option value="">PEP match</option>  
         </select>
-        <label for="additional">Upload:</label>
-        <input type="file" class="input" name="fileInput">
+        <label class="file-input-label">
+            <label class="button-container hover-info" data-info="Upload a file">
+                <input type="file" class="input" name="fileInput">
+                <img src="upload-icon.png" alt="Image" class="image">
+                <span class="button">Upload</span>    
+            </label>
+        </label>
         <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();"/>
     </div>
      <br/>
