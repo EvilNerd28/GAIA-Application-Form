@@ -93,31 +93,6 @@
             <div class="sub1 hover-info" data-info="3.2.4.1 CIP Verification">Primary Documentation</div>
             <br/>
             <div class="mini">
-                <lable>Document Type</lable>
-                <select name="Document Type" id="dtype"> 
-                    <option value="Driver's Licence">Driver's Licence</option> 
-                    <option value="Passport">Passport</option> 
-                    <option value="Government Photo ID">Government Photo ID</option> 
-                    <option value="U.S Armed Forces ID">U.S Armed Forces ID</option> 
-                    <option value="U.S Alien Registration Card">U.S Alien Registration Card</option>
-                    <option value="Permanent Resident Card">Permanent Resident Card</option>
-                </select>
-                <label for="doctype-primary">Upload</label>
-                <input type="file" class="input" name="fileInput">
-                <img src="lens.png" height="40px" width="40px" class="hover-info-image" data-info="View Document" onclick="openModal()" onmouseover="showTooltip(this)" onmouseout="hideTooltip()">
-                <!-- The Modal -->
-                <div id="myModal" class="modal">
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal()">&times;</span>
-                    <img id="modalImage" alt="Document Image" style="width:100%">
-                </div>
-                </div>
-            </div>
-            <br/>
-            <br/>
-            <div class="sub1 hover-info" data-info="3.2.4.2 CIP Verification">Secondary Documentation</div>
-            <br/><div class="mini">
                 <label>Document Type</label>
                 <select name="Document Type" id="dtype"> 
                     <option value="Driver's Licence">Driver's Licence</option> 
@@ -127,13 +102,47 @@
                     <option value="U.S Alien Registration Card">U.S Alien Registration Card</option>
                     <option value="Permanent Resident Card">Permanent Resident Card</option>
                 </select>
-                <label for="doctype-secondary">Upload</label>
-                <input type="file" class="input" name="fileInput">
-                <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();" />
+                <label class="file-input-label">
+                    <label class="button-container hover-info" data-info="Upload a file">
+                        <input type="file" class="input" name="fileInput">
+                        <img src="upload-icon.png" alt="Image" class="image">
+                        <span class="button">Upload</span>    
+                    </label>
+                </label>
+                <img src="lens.png" height="40px" width="40px" class="hover-info-image" data-info="View Document" onclick="openModal()" onmouseover="showTooltip(this)" onmouseout="hideTooltip()">
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img id="modalImage" alt="Document Image" style="width:100%">
+                </div>
+                </div>
+            </div>            
+            <br/>
+            <br/>
+            <div class="sub1 hover-info" data-info="3.2.4.2 CIP Verification">Secondary Documentation</div>
+            <div class="mini">
+                <label>Document Type</label>
+                <select name="Document Type" id="dtype"> 
+                    <option value="Driver's Licence">Driver's Licence</option> 
+                    <option value="Passport">Passport</option> 
+                    <option value="Government Photo ID">Government Photo ID</option> 
+                    <option value="U.S Armed Forces ID">U.S Armed Forces ID</option> 
+                    <option value="U.S Alien Registration Card">U.S Alien Registration Card</option>
+                    <option value="Permanent Resident Card">Permanent Resident Card</option>
+                </select>
+                <label class="file-input-label">
+                    <label class="button-container hover-info" data-info="Upload a file">
+                        <input type="file" class="input" name="fileInput">
+                        <img src="upload-icon.png" alt="Image" class="image">
+                        <span class="button">Upload</span>    
+                    </label>
+                </label>
+                <img src="lens.png" height="40px" width="40px" class="hover-info-image" data-info="View Document" onclick="viewSecondary()" onmouseover="showTooltip(this)" onmouseout="hideTooltip()"/>
             </div>
-        </div>
-        <br/><br><br>
-        <div class="purple hover-info" data-info="3.2.4.2 Non-Documentary Verification">KYC- Non Documentary Verification</div><br>
+            <br/><br><br>
+            <div class="purple hover-info" data-info="3.2.4.2 Non-Documentary Verification">KYC- Non Documentary Verification</div><br>
             <div class="mini">
                 <label>Document Type</label>
                 <select name="Document Type" id="dtype"> 
@@ -145,15 +154,22 @@
                     <option value="Mortgage statement">Mortgage statement</option>
                     <option value="Account statement from previous bank">Account statement from previous bank</option>
                 </select>
-                <label for="non-doctype-primary">Upload</label>
-                <input type="file" class="input" name="fileInput">
-                <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();" />
+                <label class="file-input-label">
+                    <label class="button-container hover-info" data-info="Upload a file">
+                        <input type="file" class="input" name="fileInput">
+                        <img src="upload-icon.png" alt="Image" class="image">
+                        <span class="button">Upload</span>    
+                    </label>
+                </label>
+                <img src="lens.png" height="40px" width="40px" class="hover-info-image" data-info="View Document" onclick="viewKYC()" onmouseover="showTooltip(this)" onmouseout="hideTooltip()">       
             </div>
+
         <br>
     </form>
     <br/>
     <br/>
     <br/>
     <br/>
+    <script src="javascript.js"></script>
 </body>
 </html>
