@@ -180,16 +180,35 @@ nav a:visited,
     color:white;
 }
 
-.upload{
+/* CSS for upload buttons */
+.upload {
     display: flex;
     justify-content: space-evenly;
     align-content: center;
-    background-color:rgb(129, 117, 111);
-    color:white;
+    background-color: rgb(129, 117, 111);
+    color: white;
     height: 80px;
     font-size: 22px;
     padding: 10px;
+    align-items: center;
 }
+
+.upload img {
+    margin-right: 10px;
+}
+
+.upload label {
+    padding: 10px 20px;
+    background-color: rgb(100, 200, 125);
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.upload input[type="file"] {
+    display: none;
+}
+
 
 .grid {
     display: flex; 
@@ -235,11 +254,12 @@ nav a:visited,
 #submit{
     background-color:rgb(100, 200, 125);
     padding: 20px;
+    border: none;
     border-radius: 10px;
     width: 120px;
     margin: 0, 0;
+    color: white;
 }
-
 .mini {
     display: flex;
     font-size: 18px;
@@ -250,13 +270,15 @@ nav a:visited,
 
 .mini input{
     border: none;
-    border-radius: 10px;
-}
-.mini select{
+    border-radius: 5px;
     height: 40px;
     width: 180px;
+}
+.mini > select {
+    height: 40px;
+    width: 180px !important;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 /*Entity*/
@@ -277,6 +299,12 @@ nav a:visited,
     flex-direction: column;
     gap: 10px;
     color: black;
+}
+
+.e > select, input{
+    border: none;
+    border-radius: 5px;
+    height: 20px;
 }
 
 .file-input-label {
@@ -394,9 +422,15 @@ nav a:visited,
     background-color:rgb(100, 200, 125);
  }
 
-#ofacmain{
-    background-color:#c7c6c2;
- }
+#ofacmain {
+    background-color: #c7c6c2;
+    color: white;
+    display: block;
+    border-radius: 20px;
+    text-align: center;
+    padding: 12px 90px;
+    text-decoration: none;
+}
 
 .check input{
     height: 20px;
@@ -476,4 +510,34 @@ button:hover {
     background-color: white; 
 }
 
-  
+/*UPLOAD BUTTON*/
+
+.button-container {
+    position: relative;
+    display: inline-block;
+}
+
+.input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.image {
+    position: relative;
+    top: 5px; 
+    right: 5px;
+    width: 20px;
+    height: 20px;
+}
+
