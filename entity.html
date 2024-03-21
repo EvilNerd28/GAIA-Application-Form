@@ -43,12 +43,13 @@
     </div>
     <br><br>
     <div class="upload">
-        <img src="id-img.png" height="70px" width="100px">
+        <lable>ID Upload:</lable>
+        <img src="id-img.png" height="70px" width="100px"> 
         <form enctype="multipart/form-data">
             <label for="fileInput">Select a File</label>
-            <input type="file" class="input" name="fileInput">
-            <label id="fileLabel" for="camera-input">Camera upload</label>
-            <input type="file" class="input" name="camera-input" accept="image/*" capture="camera">
+            <input type="file" class="input" name="fileInput" id="fileInput">
+            <label id="cameraLabel" for="camera-input">Camera upload</label>
+            <input type="file" class="input" name="camera-input" accept="image/*" capture="camera" id="camera-input">
         </form>
     </div>
     <br/>
@@ -98,12 +99,14 @@
     <div class="mini">
         <label>Signatories Full Name</label>
         <input type="text" name="docID"/>
-        <label >Signature Upload</label>
-        <input type="file" class="input" name="fileInput" value="Select a File">
+        <lable>Signature/Digital Signature</lable>
         <label class="file-input-label">
-            <input type="file" class="input" name="fileInput">
-            Digital Signature
-          </label>
+            <label class="button-container hover-info" data-info="Upload a file">
+                <input type="file" class="input" name="fileInput">
+                <img src="upload-icon.png" alt="Image" class="image">
+                <span class="button">Upload</span>    
+            </label>
+        </label>
     </div>
     <br><br>            
     <center><input type="submit" value="Submit" id="submit"></center>
