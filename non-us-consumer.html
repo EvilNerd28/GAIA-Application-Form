@@ -46,62 +46,62 @@
     <div class="purple">Personal Information</div>
     <div class="gridA1">
         <div class="grid-itemA1 col1">
-            <label>Application ID:</label>
+            <label>Application ID</label>
                 <input type="text" name="app-id"/>
-            <label>Middle Name:</label>
+            <label>Middle Name</label>
                 <input type="text" name="mname"/>
-            <label>Gender:</label>
+            <label>Gender</label>
                 <input type="text" name="gender"/>
-            <label>Street Address:</label>
+            <label>Street Address</label>
                 <input type="text" name="add"/>
-            <label>Postal Code:</label>
+            <label>Postal Code</label>
                 <input type="text" name="postal-code"/>
         </div>
         <div class="grid-itemA1 col2">
-            <label>Account Type:</label>
+            <label>Account Type</label>
                 <input type="text" name="acc-type"/>
-            <label>Last Name:</label>
+            <label>Last Name</label>
                 <input type="text" name="lname"/>
-            <label>Email:</label>
+            <label>Email</label>
                 <input type="email" name="email"/>
-            <label>City:</label>
+            <label>City</label>
                 <input type="text" name="city"/>
-            <label>Country:</label>
+            <label>Country</label>
                 <input type="text" name="country"/>
-            <label>ID Number:</label>
+            <label>ID Number</label>
                 <input type="text" name="idno"/>
         </div>           
         <div class="grid-itemA1 col3">
-            <label>First Name:</label>
+            <label>First Name</label>
                 <input type="text" name="fname"/>
-            <label>Birth Date:</label>
+            <label>Birth Date</label>
                 <input type="date" name="date"/>
-            <label>Phone:</label>
+            <label>Phone</label>
                 <input type="number" name="phn"/>
-            <label>State:</label>
+            <label>State</label>
                 <input type="text" name="state"/>
-            <label>ID Type:</label>
+            <label>ID Type</label>
                 <input type="text" name="id-type"/>
         </div>        
     </div>
     <br/>
     <div class="sub-grid">
         <div class="sub-grid-item colx">
-          <label>KYC ID:</label>
+          <label>KYC ID</label>
               <input type="text" name="kycID"/>
-          <label>EDD Score:</label>
+          <label>EDD Score</label>
               <input type="text" name="eddscore"/>
         </div>
         <div class="sub-grid-item coly">
-            <label>SDN Score:</label>
+            <label>SDN Score</label>
                 <input type="text" name="sdnscore"/>
-            <label>OFAC Score:</label>
+            <label>OFAC Score</label>
                 <input type="text" name="ofacscore"/>
         </div>
         <div class="sub-grid-item colz">
-            <label>CDD Score:</label>
+            <label>CDD Score</label>
                 <input type="text" name="cddscore"/>
-            <label>PEP Score:</label>
+            <label>PEP Score</label>
                 <input type="text" name="pepscore"/>
         </div>
     </div>
@@ -121,23 +121,33 @@
                     <option value="passport-non-us">Passport</option>
                     <option value="national-id">National Identity Card</option> 
                 </select>
-                <label for="nonus-doctype-p">Upload</label>
-                <input type="file" class="input" name="fileInput">
+                <label class="file-input-label">
+                    <label class="button-container hover-info" data-info="Upload a file">
+                        <input type="file" class="input" name="fileInput">
+                        <img src="upload-icon.png" alt="Image" class="image">
+                        <span class="button">Upload</span>    
+                    </label>
+                </label>
                 <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();"/>
             </div>
             <br/>
             <br/>
-            <div class="sub1">Secondary Documentation:</div>
+            <div class="sub1">Secondary Documentation</div>
             <br/>
             <div class="mini">
-                <label>Document Type:</label>
+                <label>Document Type</label>
                 <select name="Document Type" id="dtype"> 
                     <option value="cob">Certifies Birth Certificate</option> 
                     <option value="benefits-ID">Benefits ID card with photo</option> 
                     <option value="brokerage-stmt">Bank/brokerage statement</option> 
                 </select>
-                <label for="nonus-doctype-s">Upload:</label>
-                <input type="file" class="input" name="fileInput">
+                <label class="file-input-label">
+                    <label class="button-container hover-info" data-info="Upload a file">
+                        <input type="file" class="input" name="fileInput">
+                        <img src="upload-icon.png" alt="Image" class="image">
+                        <span class="button">Upload</span>    
+                    </label>
+                </label>
                 <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();"/>
             </div>
         </div>
@@ -155,8 +165,13 @@
                     <option value="Mortgage statement">Mortgage statement</option>
                     <option value="Account statement from previous bank">Account statement from previous bank</option>
                 </select>
-        <label for="nonus-nondoc">Upload:</label>
-        <input type="file" class="input" name="fileInput">
+                <label class="file-input-label">
+                    <label class="button-container hover-info" data-info="Upload a file">
+                        <input type="file" class="input" name="fileInput">
+                        <img src="upload-icon.png" alt="Image" class="image">
+                        <span class="button">Upload</span>    
+                    </label>
+                </label>
         <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();"/>
     </div>
     </form>
