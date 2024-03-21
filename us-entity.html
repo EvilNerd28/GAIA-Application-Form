@@ -47,45 +47,45 @@
     <div class="purple">Personal Information</div>
     <div class="gridA1">
         <div class="grid-itemA1 col1">
-          <lable>Application ID:</lable>
+          <lable>Application ID</lable>
             <input type="text" name="app-id"/>
-          <lable>Middle Name:</lable>
+          <lable>Middle Name</lable>
             <input type="text" name="mname"/>
-          <lable>Gender:</lable>
+          <lable>Gender</lable>
             <input type="text" name="gender"/>
-          <lable>Street Address:</lable>
+          <lable>Street Address</lable>
             <input type="text" name="add"/>
-          <lable>Postal Code:</lable>
+          <lable>Postal Code</lable>
             <input type="text" name="postal-code"/>
-          <lable>ID Number:</lable>
+          <lable>ID Number</lable>
             <input type="text" name="idno"/>
         </div>
         <div class="grid-itemA1 col2">
-          <lable>Account Type:</lable>
+          <lable>Account Type</lable>
             <input type="text" name="acc-type"/>
-          <lable>Last Name:</lable>
+          <lable>Last Name</lable>
             <input type="text" name="lname"/>
-          <lable>Email:</lable>
+          <lable>Email</lable>
             <input type="email" name="email"/>
-          <lable>City:</lable>
+          <lable>City</lable>
             <input type="text" name="city"/>
-          <lable>Country:</lable>
+          <lable>Country</lable>
             <input type="text" name="country"/>
-          <lable>Entity Full Name:</lable>
+          <lable>Entity Full Name</lable>
             <input type="text" name="entity-name"/>
         </div>           
         <div class="grid-itemA1 col3">
-          <lable>First Name:</lable>
+          <lable>First Name</lable>
             <input type="text" name="fname"/>
-          <lable>Birth Date:</lable>
+          <lable>Birth Date</lable>
             <input type="date" name="date"/>
-          <lable>Phone:</lable>
+          <lable>Phone</lable>
             <input type="number" name="phn"/>
-          <lable>State:</lable>
+          <lable>State</lable>
             <input type="text" name="state"/>
-          <lable>ID Type:</lable>
+          <lable>ID Type</lable>
             <input type="text" name="id-type"/>
-          <lable>Business Category:</lable>
+          <lable>Business Category</lable>
             <input type="text" name="b-cat"/>
         </div>        
     </div>
@@ -95,27 +95,27 @@
   </div><br><br><br/><br/>
     <div class="sub-grid">
       <div class="sub-grid-item colx">
-        <lable>KYC ID:</lable>
+        <lable>KYC ID</lable>
           <input type="text" name="kycID"/>
-        <lable>EDD Score:</lable>
+        <lable>EDD Score</lable>
           <input type="text" name="eddscore"/>
-        <lable>SDN Score:</lable>
+        <lable>SDN Score</lable>
           <input type="text" name="sdnscore"/>
       </div>
       <div class="sub-grid-item coly">
-        <lable>SPDD Score:</lable>
+        <lable>SPDD Score</lable>
           <input type="text" name="spddscore"/>
-        <lable>OFAC Score:</lable>
+        <lable>OFAC Score</lable>
           <input type="text" name="ofacscore"/>
-        <lable>Business Category:</lable>
+        <lable>Business Category</lable>
           <input type="text" name="bcat"/>
       </div>
       <div class="sub-grid-item colz">
-        <lable>CDD Score:</lable>
+        <lable>CDD Score</lable>
           <input type="text" name="cddscore"/>
-        <lable>PEP Score:</lable>
+        <lable>PEP Score</lable>
           <input type="text" name="pepscore"/>
-        <lable>NAICS Code:</lable>
+        <lable>NAICS Code</lable>
           <input type="text" name="naics"/>
       </div>
   </div>
@@ -126,10 +126,10 @@
   <div class="purple">KYC- Documentary Verification</div>
   <br/>
   <div class="rowB1">
-    <div class="sub1">Primary Documentation:</div>
+    <div class="sub1">Primary Documentation</div>
       <br/>
       <div class="mini">
-      <lable>Document Type:</lable>
+      <lable>Document Type</lable>
       <select name="Document Type" id="dtype"> 
           <option value=""></option>
           <option value="">Government issued business license</option>
@@ -141,8 +141,13 @@
           <option value="">Agreement (Unincorporated Association)</option>
           <option value="">Agreement (Unincorporated Association)</option> 
         </select>
-        <label for="entity-primary">Upload:</label>
-        <input type="file" class="input" name="fileInput">
+        <label class="file-input-label">
+          <label class="button-container hover-info" data-info="Upload a file">
+              <input type="file" class="input" name="fileInput">
+              <img src="upload-icon.png" alt="Image" class="image">
+              <span class="button">Upload</span>    
+          </label>
+      </label>
         <img src="lens.png" height="40px" width="40px" onclick="document.getElementById('viewMoreBtn').click();"/>
       </div>
   </div>
@@ -150,15 +155,20 @@
   <div class="purple">KYC- Non Documentary Verification</div>
     <br/><br/>
     <div class="mini">
-        <lable>Document Type:</lable>
+        <lable>Document Type</lable>
           <select name="Document Type" id="dtype"> 
             <option value="Credit report">Credit report</option> 
             <option value="LexisNexis IDV">LexisNexis IDV</option>
             <option value="Tax return">Tax return</option>
             <option value="audit">Audited financial statement</option>
           </select>
-        <label for="non-doctype-entity">Upload:</label>
-          <input type="file" class="input" name="fileInput">
+          <label class="file-input-label">
+            <label class="button-container hover-info" data-info="Upload a file">
+                <input type="file" class="input" name="fileInput">
+                <img src="upload-icon.png" alt="Image" class="image">
+                <span class="button">Upload</span>    
+            </label>
+        </label>
           <img src="lens.png" height="40px" width="40px" onclick="document.getElementById('viewMoreBtn').click();"/>
       </div>
       <br/>
