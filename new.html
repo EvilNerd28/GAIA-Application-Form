@@ -13,18 +13,20 @@
         <a href="login.html" class="logout-button">Logout</a>
     </div>
     </header>
+    <br>
     <div class="flex2">
         <a href="new.html"><input class="flex-item2" id="ind" type="button" value="Individual Application"/></a>
         <a href="entity.html"><input class="flex-item2" id="ent" type="button" value="Entity Application"/></a>
     </div>
     <br/>
     <div class="upload">
-        <img src="id-img.png" height="70px" width="100px">
-        <form>
+        <lable>ID Upload:</lable>
+        <img src="id-img.png" height="70px" width="100px"> 
+        <form enctype="multipart/form-data">
             <label for="fileInput">Select a File</label>
-            <input type="file" class="input">
-            <label id="fileLabel" for="camera-input">Camera upload</label>
-            <input type="file" class="input" name="camera-input" accept="image/*" capture="camera">
+            <input type="file" class="input" name="fileInput" id="fileInput">
+            <label id="cameraLabel" for="camera-input">Camera upload</label>
+            <input type="file" class="input" name="camera-input" accept="image/*" capture="camera" id="camera-input">
         </form>
     </div>
     <br/>
