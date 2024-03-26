@@ -53,12 +53,21 @@
         </select>
         <label class="file-input-label">
             <label class="button-container hover-info" data-info="Upload a file">
-                <input type="file" class="input" name="fileInput">
+                <input type="file" class="input" id="fileInput" name="fileInput">
                 <img src="upload-icon.png" alt="Image" class="image">
                 <span class="button">Upload</span>    
             </label>
         </label>
-        <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();"/>
+        <img src="lens.png" height="40px" width="40px" class="hover-info-image" data-info="View Document" onclick="openModal()" onmouseover="showTooltip(this)" onmouseout="hideTooltip()">
+        
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <a id="modalLink" alt="Document Link" style="display: none;">Download Document</a>
+            </div>
+        </div>      
     </div>
     <br/>
     <br/>
@@ -77,12 +86,21 @@
         </select>
         <label class="file-input-label">
             <label class="button-container hover-info" data-info="Upload a file">
-                <input type="file" class="input" name="fileInput">
+                <input type="file" class="input" id="fileInput" name="fileInput">
                 <img src="upload-icon.png" alt="Image" class="image">
                 <span class="button">Upload</span>    
             </label>
         </label>
-        <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();"/>
+        <img src="lens.png" height="40px" width="40px" class="hover-info-image" data-info="View Document" onclick="openModal()" onmouseover="showTooltip(this)" onmouseout="hideTooltip()">
+        
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <a id="modalLink" alt="Document Link" style="display: none;">Download Document</a>
+            </div>
+        </div>      
     </div>
     <br/>
     <br/>
@@ -99,12 +117,21 @@
           </select>
           <label class="file-input-label">
             <label class="button-container hover-info" data-info="Upload a file">
-                <input type="file" class="input" name="fileInput">
+                <input type="file" class="input" id="fileInput" name="fileInput">
                 <img src="upload-icon.png" alt="Image" class="image">
                 <span class="button">Upload</span>    
             </label>
         </label>
-          <img src="lens.png" height="40px" width="40px" class="hover-info" data-info="View Document" onclick="document.getElementById('viewMoreBtn').click();"/>
+        <img src="lens.png" height="40px" width="40px" class="hover-info-image" data-info="View Document" onclick="openModal()" onmouseover="showTooltip(this)" onmouseout="hideTooltip()">
+        
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <a id="modalLink" alt="Document Link" style="display: none;">Download Document</a>
+            </div>
+        </div>      
     </div>
     <br/>
     <br/>
