@@ -140,7 +140,16 @@
                         <span class="button">Upload</span>    
                     </label>
                 </label>
-                <img src="lens.png" height="40px" width="40px" class="hover-info-image" data-info="View Document" onclick="viewSecondary()" onmouseover="showTooltip(this)" onmouseout="hideTooltip()"/>
+                <img src="lens.png" height="40px" width="40px" class="hover-info-image" data-info="View Document" onclick="openModal()" onmouseover="showTooltip(this)" onmouseout="hideTooltip()">
+                
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <a id="modalLink" alt="Document Link" style="display: none;">Download Document</a>
+                    </div>
+                </div>       
             </div>
             <br/><br><br>
             <div class="purple hover-info" data-info="3.2.4.2 Non-Documentary Verification">KYC- Non Documentary Verification</div><br>
@@ -162,7 +171,16 @@
                         <span class="button">Upload</span>    
                     </label>
                 </label>
-                <img src="lens.png" height="40px" width="40px" class="hover-info-image" data-info="View Document" onclick="viewKYC()" onmouseover="showTooltip(this)" onmouseout="hideTooltip()">       
+                <img src="lens.png" height="40px" width="40px" class="hover-info-image" data-info="View Document" onclick="openModal()" onmouseover="showTooltip(this)" onmouseout="hideTooltip()">
+                
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <a id="modalLink" alt="Document Link" style="display: none;">Download Document</a>
+                    </div>
+                </div>       
             </div>
 
         <br>
